@@ -1,0 +1,10 @@
+h1{
+    justify-content: center;
+    -ms-flex-align: center;
+    color: rgb(42, 46, 165);
+}
+.buttons{
+    justify-content: center;
+    -ms-flex-align: center;
+    color: rgb(219, 21, 21) !important;
+}

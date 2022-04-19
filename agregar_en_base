@@ -1,0 +1,16 @@
+<?php 
+
+    if(isset($_POST['nombre'])){
+        $nombre = $_POST['nombre'];
+    }
+
+    $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
+
+
+
+
+
+
+
+
+?>
