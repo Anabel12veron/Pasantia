@@ -7,7 +7,7 @@
     $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
 
   
-
+   
 
 
 
