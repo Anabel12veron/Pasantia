@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS v5.0.2 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Datos Registrados</title>
 </head>
 <body>
@@ -37,6 +37,8 @@
                 <td class="F_Nacimiento"><?php echo $programador["F_Nacimiento"]; ?></td>
                 <td class="DNI"><?php echo $programador["DNI"]; ?></td>
                 <td class="Sexo"><?php echo $programador["Sexo"]; ?></td>
+
+                <td class="eliminar"><a href="<?php echo "../base_de_datos/eliminarDatos.php?id=",$programador['ID_Persona'];?>"><button class="btn btn-danger"> Eliminar</button></a></a></td>
             </tr>
         <?php
             }
@@ -44,7 +46,6 @@
         </tbody>
         </table>
     </div>
-
 
 
 <!-- Bootstrap JavaScript Libraries -->

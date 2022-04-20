@@ -18,7 +18,8 @@
   <h1 class="text-center">Registro de Datos</h1>
   <a name="" id="" class="btn btn-info" href="../index.php" role="button">Volver al Inicio</a>
 
-    <form action="./agregar_persona.php" method="POST" >
+  <!--Formulatio y Dirección donde se hace el registro -->
+    <form action="../base_de_datos/agregar_persona.php" method="POST" >
       <div class="mb-3 row">
         <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
         <div class="col-sm-1-12">

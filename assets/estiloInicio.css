@@ -1,10 +1,19 @@
 h1{
     justify-content: center;
     -ms-flex-align: center;
-    color: rgb(42, 46, 165);
+    color: rgb(25, 197, 194);
 }
 .buttons{
     justify-content: center;
     -ms-flex-align: center;
     color: rgb(219, 21, 21) !important;
+}
+
+body {
+    background-image: url("../img/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
 }

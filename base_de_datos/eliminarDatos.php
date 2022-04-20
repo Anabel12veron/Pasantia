@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Agregado</title>
+    <title>Eliminar</title>
 </head>
 <body>
-<?php
 
-require ("../base_de_datos/Conexion.php");
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="../pantallas/eliminarDatos.php"/></svg>
+    <div>
+        Se ha eliminado una información ✔
+    </div>
+    </div>
+    <?php
+    
+    require "../base_de_datos/Conexion.php";
 
-//print_r($_POST);
+	$programador=$_GET["id"];
 
-    $Nombre = $_POST['Nombre'];
-    $Apellido = $_POST['Apellido'];
-    $F_Nacimiento = $_POST['F_Nacimiento'];
-    $DNI = $_POST['DNI'];
-    $Sexo = $_POST['Sexo'];
+    $eliminar= "DELETE FROM persona Where ID_Persona = $programador";
 
-$agregar = "INSERT INTO persona (Nombre, Apellido, F_Nacimiento, DNI, Sexo) VALUES ('$Nombre', '$Apellido', '$F_Nacimiento', $DNI, '$Sexo')";
-$resultado = $mysqli->query($agregar) or die ($mysqli->error);
-?>
+    $resultado=$mysqli->query($eliminar);
 
-
+    ?>
+    <a href="../pantallas/datos_programador.php"><button class="btn btn-success">Ir a la Lista de datos guardados</button></a>
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
