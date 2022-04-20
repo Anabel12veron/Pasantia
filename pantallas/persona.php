@@ -57,7 +57,7 @@
       <div class="mb-3 row">
         <div class="text-center">
           <button type="submit" class="btn btn-light">Agregar</button>
-          <button type="button" class="btn btn-light"><a href="index.php" >Cancelar</button>
+          <button type="button" class="btn btn-light"><a href="index.php">Cancelar</button>
         </div>
       </div>
     </form>
