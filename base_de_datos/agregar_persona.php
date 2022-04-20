@@ -11,7 +11,7 @@
 <body>
 <?php
 
-require ("./base_de_datos/Conexion.php");
+require ("../base_de_datos/Conexion.php");
 
 //print_r($_POST);
 

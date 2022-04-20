@@ -10,13 +10,13 @@
 </head>
 <body>
 <?php 
-  require ("./base_de_datos/Conexion.php");
+  require ("../base_de_datos/Conexion.php");
   $sql= 'SELECT * FROM persona';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>
   <div class="container">
   <h1 class="text-center">Registro de Datos</h1>
-  <a name="" id="" class="btn btn-info" href="index.php" role="button">Volver a Inicio</a>
+  <a name="" id="" class="btn btn-info" href="../index.php" role="button">Volver al Inicio</a>
 
     <form action="./agregar_persona.php" method="POST" >
       <div class="mb-3 row">
