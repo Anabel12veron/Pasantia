@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php 
-  require ("Conexion.php");
+  require ("./base_de_datos/Conexion.php");
   $sql= 'SELECT * FROM persona';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>

@@ -28,10 +28,10 @@
     <a class="nav-link active" aria-current="page" href="index.php">Información</a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="persona.php">Registrar</a>
+    <a class="btn btn-dark" href="./pantallas/persona.php">Registrar</a>
   </li>
   <li class="btn btn-success">
-    <a class="btn btn-success" href="datos_programador.php">Registros del Programadores</a>
+    <a class="btn btn-success" href="./pantallas/datos_programador.php">Registros del Programadores</a>
   </li>
   <li class="btn btn-warning">
     <a class="btn btn-warning">Proyectos</a>

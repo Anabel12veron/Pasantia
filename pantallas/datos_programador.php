@@ -13,7 +13,7 @@
     <a name="" id="" class="btn btn-info" href="index.php" role="button">Volver a Inicio</a>
     <div class="table-responsive">
         <?php 
-            require ("Conexion.php");
+            require ("./base_de_datos/Conexion.php");
             $sql= 'SELECT * FROM persona';
             $result= $mysqli->query($sql) or die ($mysqli->error);
         ?>
