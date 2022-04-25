@@ -9,9 +9,10 @@
     <title>Datos Registrados</title>
 </head>
 <body>
-    <h1 class="text-center">Datos Registrados</h1>
-    <a name="" id="" class="btn btn-info" href="../index.php" role="button">Volver al Inicio</a>
-    <div class="table-responsive">
+    <h1 class="text-center" >Datos Registrados</h1>
+    <a name="" id="" class="btn btn-info m-3" href="../index.php" role="button" >Volver al Inicio</a>
+ <div class="container">
+ <div class="table-responsive">
         <?php 
             require ("../base_de_datos/Conexion.php");
             $sql= 'SELECT * FROM persona';
@@ -45,6 +46,8 @@
         </tbody>
         </table>
     </div>
+ </div>
+    
 
 
 <!-- Bootstrap JavaScript Libraries -->
