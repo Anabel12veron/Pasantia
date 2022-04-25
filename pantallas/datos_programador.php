@@ -37,8 +37,8 @@
                 <td class="F_Nacimiento"><?php echo $programador["F_Nacimiento"]; ?></td>
                 <td class="DNI"><?php echo $programador["DNI"]; ?></td>
                 <td class="Sexo"><?php echo $programador["Sexo"]; ?></td>
-
-                <td class="eliminar"><a href="<?php echo "../base_de_datos/eliminarDatos.php?id=",$programador['ID_Persona'];?>"><button class="btn btn-danger"> Eliminar</button></a></a></td>
+                <td class="eliminar"><a href="<?php echo "../base_de_datos/crud_mysql.php?id=",$programador['ID_Persona'];?>"><button class="btn btn-danger"> Eliminar</button></a></a></td>
+                <td class="editar"><a href="<?php echo "../base_de_datos/modificarDatos.php?id=",$programador['ID_Persona'];?>"><button class="btn btn-primary"> Modificar</button></a></a></td>
             </tr>
         <?php
             }

@@ -19,7 +19,8 @@
   <a name="" id="" class="btn btn-info" href="../index.php" role="button">Volver al Inicio</a>
 
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="../base_de_datos/agregar_persona.php" method="POST" >
+    <form action="../base_de_datos/crud_mysql.php" method="POST" >
+    <input type="text" class="form-control" name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
         <div class="col-sm-1-12">
@@ -57,8 +58,8 @@
       </fieldset>
       <div class="mb-3 row">
         <div class="text-center">
-          <button type="submit" class="btn btn-light">Agregar</button>
-          <button type="button" class="btn btn-light"><a href="index.php">Cancelar</button>
+          <button class="btn btn-success" role="button">Agregar</button>
+          <a name="" id="" class="btn btn-danger" href="../index.php" role="button">Cancelar</a>
         </div>
       </div>
     </form>
