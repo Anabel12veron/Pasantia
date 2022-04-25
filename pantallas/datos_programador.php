@@ -19,7 +19,7 @@
         ?>
         <table class="table"><tr>
             <thead class="table-dark">
-            <td class="ID_Persona">ID_Persona</td>
+            <td class="ID_Persona" hidden >ID_Persona</td>
             <td class="Nombre">Nombre</td>
             <td class="Apellido">Apellido</td>
             <td class="F_Nacimiento">F_Nacimiento</td>
@@ -31,7 +31,7 @@
         <tbody>
         <?php while ($programador=mysqli_fetch_assoc($result)){?>
             <tr>
-                <td class="ID_Persona"><?php echo $programador["ID_Persona"]; ?></td>
+                <td class="ID_Persona" hidden><?php echo $programador["ID_Persona"]; ?></td>
                 <td class="Nombre"><?php echo $programador["Nombre"]; ?></td>
                 <td class="Apellido"><?php echo $programador["Apellido"]; ?></td>
                 <td class="F_Nacimiento"><?php echo $programador["F_Nacimiento"]; ?></td>
