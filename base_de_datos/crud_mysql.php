@@ -18,9 +18,6 @@ if ($_POST['action'] != 'insert'){
     $ID_Persona = $_GET["id"];
 }
 
-
-
-
 // Validaciones
 
 
@@ -48,7 +45,6 @@ if (isset($_POST['action'])) {
     $eliminar= "DELETE FROM persona Where ID_Persona = $ID_Persona";
     $resultado=$mysqli->query($eliminar);
     $mensaje_de_exito = 'Se eliminó con exito';
-
 }
 
 ?>
@@ -65,14 +61,14 @@ if (isset($_POST['action'])) {
 </head>
 <body>
 
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="../pantallas/eliminarDatos.php"/></svg>
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="../pantallas/eliminarDatos.php"/></svg>
     <div>
-        <?php echo $mensaje_de_exito ?>
+        <?php echo $mensaje_de_exito?>
     </div>
     </div>
 
-    <a href="../pantallas/datos_programador.php"><button class="btn btn-success">Ir a la Lista de datos guardados</button></a>
+    <a href="../pantallas/datos_programador.php"><button class="btn btn-success">Ir a la Lista</button></a>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
