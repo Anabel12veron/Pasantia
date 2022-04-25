@@ -10,15 +10,17 @@
 </head>
 <body>
 <?php 
-  require ("Conexion.php");
+  require ("../base_de_datos/Conexion.php");
   $sql= 'SELECT * FROM persona';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>
   <div class="container">
   <h1 class="text-center">Registro de Datos</h1>
-  <a name="" id="" class="btn btn-info" href="index.php" role="button">Volver a Inicio</a>
+  <a name="" id="" class="btn btn-info" href="../index.php" role="button">Volver al Inicio</a>
 
-    <form action="./agregar_persona.php" method="POST" >
+  <!--Formulatio y Dirección donde se hace el registro -->
+    <form action="../base_de_datos/crud_mysql.php" method="POST" >
+    <input type="text" class="form-control" name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
         <div class="col-sm-1-12">
@@ -56,8 +58,8 @@
       </fieldset>
       <div class="mb-3 row">
         <div class="text-center">
-          <button type="submit" class="btn btn-light">Agregar</button>
-          <button type="button" class="btn btn-light"><a href="index.php" >Cancelar</button>
+          <button class="btn btn-success" role="button">Agregar</button>
+          <a name="" id="" class="btn btn-danger" href="../index.php" role="button">Cancelar</a>
         </div>
       </div>
     </form>
