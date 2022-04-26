@@ -1,7 +1,7 @@
 h1{
     justify-content: center;
     -ms-flex-align: center;
-    color: rgb(25, 197, 194);
+    color: rgb(255, 255, 255);
 }
 .buttons{
     justify-content: center;
@@ -9,11 +9,18 @@ h1{
     color: rgb(219, 21, 21) !important;
 }
 
-body {
-    background-image: url("../img/fondo1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
+.fondo {
+    background: rgb(31,255,0);
+    background: radial-gradient(circle, rgba(31,255,0,1) 0%, rgba(55,250,0,1) 0%, rgba(5,61,0,1) 0%, rgba(3,84,0,1) 100%); 
+}
+
+.form-select{
+    width: 30%;
+    margin-left: 14px;
+}
+
+.container{
+    border-radius: 15px ;
+    /* -webkit-box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); 
+box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
 }

@@ -26,7 +26,7 @@
     $resultado=$mysqli->query($eliminar);
 
     ?>
-    <a href="../pantallas/datos_programador.php"><button class="btn btn-success">Ir a la Lista de datos guardados</button></a>
+    <a href="../pantallas/datos_programador.php"><button class="btn btn-success">Ir a la Lista</button></a>
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
