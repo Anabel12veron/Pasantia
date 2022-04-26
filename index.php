@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  
 </head>
-<body>
+<body class="fondo">
 <h1 class="text-center">Formulario</h1>
 
     <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
     <div class="container">
-    <h2 class="text-center">Inicio</h2>
+    <h2 class="text-center">UPSTI "Unidad Provincial de Sistema y Tecnologia de Información"</h2>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

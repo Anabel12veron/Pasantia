@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
   <!-- Bootstrap CSS v5.0.2 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>Registro</title>
+  <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
-<body>
+<body class="fondo">
 <?php 
   require ("../base_de_datos/Conexion.php");
   $sql= 'SELECT * FROM persona';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>
-  <div class="container">
+ 
   <h1 class="text-center">Registro de Datos</h1>
-  <a name="" id="" class="btn btn-info" href="../index.php" role="button">Volver al Inicio</a>
-
+  <a name="" id="" class="btn btn-info m-3" href="../index.php" role="button">Volver al Inicio</a>
+  <div class="container" style="background-color: #ffffff; padding: 25px">
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="../base_de_datos/crud_mysql.php" method="POST" >
-    <input type="text" class="form-control" name="action" id="action" value="insert">
+    <form action="../base_de_datos/crud_mysql.php"  method="POST" >
+    <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
         <div class="col-sm-1-12">
@@ -47,16 +48,15 @@
       </div>
       <div class="mb-3 row">
         <label for="Sexo" class="col-sm-1-12 col-form-label">Sexo</label>
-        <select class="form-select" aria-label="Default select example"  name="Sexo" id="Sexo">
-          <option value="1">Masculino</option>
-          <option value="2">Femenino</option>
+        <select class="form-select" aria-label="Default select example"  name="Sexo" id="Sexo" >
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
         </select>
-
       </div> 
-       </div>
+      </div>
       </div>
       </fieldset>
-      <div class="mb-3 row">
+      <div class="m-3 row">
         <div class="text-center">
           <button class="btn btn-success" role="button">Agregar</button>
           <a name="" id="" class="btn btn-danger" href="../index.php" role="button">Cancelar</a>
@@ -64,6 +64,8 @@
       </div>
     </form>
   </div>
+
+
 
 
 <!-- Bootstrap JavaScript Libraries -->

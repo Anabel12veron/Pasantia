@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando</title>
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Modificando</title>
-
+    <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
-<body>
-<h1>Modifique sus Datos</h1>
+<body class="fondo">
+<h1 class="text-center">Modifique sus Datos</h1>
 	<?php
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
@@ -18,12 +18,10 @@
     	$resultado = $mysqli->query($sql);
     	$dato = mysqli_fetch_assoc($resultado);
 	?>
-  <a name="" id="" class="btn btn-info" href="../pantallas/datos_programador.php" role="button">Volver</a>
   <!--Formulatio y Dirección donde se hace el registro -->
     <form action="../base_de_datos/crud_mysql.php?id=<?php echo $dato['ID_Persona']?>" method="POST" >
-
-    <input type="text" class="form-control" name="action" id="action" value="update">
-
+    <input type="text" class="form-control" hidden name="action" id="action" value="update">
+      <div class="container" style="background-color: #ffffff; padding: 25px">
       <div class="mb-3 row">
         <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
         <div class="col-sm-1-12">
@@ -51,15 +49,15 @@
       <div class="mb-3 row">
         <label for="Sexo" class="col-sm-1-12 col-form-label">Sexo</label>
         <select class="form-select" aria-label="Default select example"  name="Sexo" id="Sexo">
-          <option value="1">Masculino</option>
-          <option value="2">Femenino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
         </select>
 
       </div> 
        </div>
       </div>
       </fieldset>
-      <div class="mb-3 row">
+      <div class="m-3 row">
         <div class="text-center">
           <button name="actualizar" class="btn btn-success" role="button">Guardar</button>
           
