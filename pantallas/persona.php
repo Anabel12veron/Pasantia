@@ -17,7 +17,6 @@
 ?>
  
   <h1 class="text-center">Registro de Datos</h1>
-  <a name="" id="" class="btn btn-info m-3" href="../index.php" role="button">Volver al Inicio</a>
   <div class="container" style="background-color: #ffffff; padding: 25px">
   <!--Formulatio y Dirección donde se hace el registro -->
     <form action="../base_de_datos/crud_mysql.php"  method="POST" >
