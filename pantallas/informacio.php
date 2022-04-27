@@ -53,6 +53,16 @@
     </div>
     </div>
 
+<div style="display: flex; flex-direction: row;" >
+
+<div class="card" style="width: 19rem;">
+        <img src="../img/upsti10.PNG" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">"Unidad Provincial de Sistemas y Tecnologías de Información" (UPSTI)</p> 
+            <p class="cardt-text">La UPSTI es un Organismo (Subsecretaría) que depende directamente del Ministerio de Economía, Hacienda y Finanzas. 
+                La UPSTI participa activamente en los proyectos de desarrollo, innovación, implementación, compatibilización e integración de las tecnologías de la información en el ámbito de la Administración Pública del gobierno.</p>
+        </div>
+    </div>
     <div class="card" style="width: 19rem;">
         <img src="../img/upsti10.PNG" class="card-img-top" alt="...">
         <div class="card-body">
@@ -61,6 +71,9 @@
                 La UPSTI participa activamente en los proyectos de desarrollo, innovación, implementación, compatibilización e integración de las tecnologías de la información en el ámbito de la Administración Pública del gobierno.</p>
         </div>
     </div>
+
+</div>
+   
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
