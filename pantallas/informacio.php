@@ -64,11 +64,32 @@
         </div>
     </div>
     <div class="card" style="width: 19rem;">
-        <img src="../img/upsti10.PNG" class="card-img-top" alt="...">
+        <img src="../img/registro.PNG" class="card-img-top" alt="">
         <div class="card-body">
-            <p class="card-text">"Unidad Provincial de Sistemas y Tecnologías de Información" (UPSTI)</p> 
-            <p class="cardt-text">La UPSTI es un Organismo (Subsecretaría) que depende directamente del Ministerio de Economía, Hacienda y Finanzas. 
-                La UPSTI participa activamente en los proyectos de desarrollo, innovación, implementación, compatibilización e integración de las tecnologías de la información en el ámbito de la Administración Pública del gobierno.</p>
+            <p class="card-text"><p><strong>REGISTRAR:</strong></p></p> 
+            <p class="cardt-text">Si decea registrarse debe precionar el botón <strong>"Registrar"</strong> que se encuentra en la página inicial. Al precionarlo visualizará un formulario que solicitará su:</p>
+            <p class="cardt-text"><strong>-Nombre</strong></p>
+            <p class="cardt-text"><strong>-Apellido</strong></p>
+            <p class="cardt-text"><strong>-Fecha de Nacimiento</strong></p>
+            <p class="cardt-text"><strong>-DNI</strong></p>
+            <p class="cardt-text"><strong>-Sexo</strong></p>
+            <p class="cardt-text">Si rellena todos esos datos debe precionar el botón <strong>'Guardar'</strong>, en cambio, si decea abandonar la pantalla de registro debe precionar en el botón <strong>'Cancelar'</strong>.</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 19rem;">
+        <img src="../img/datos11.PNG" class="card-img-top" alt="">
+        <div class="card-body">
+            <p class="card-text"><p><strong>REGISTROS DEL PROGRAMADOR:</strong></p></p> 
+            <p class="cardt-text">Si decea ver los datos guardados has click en el botón <strong>"Registros del Programador"</strong> que se encuentra a lado del botón <strong>'Registrar'</strong> ubicado en la pantalla de Inicio. Al precionarlo visualizará todos datos ya registardos por el formulario.</p>
+            <p class="cardt-text">Si quiere modificar alguno de los datos ya cargados, precione el botón <strong>'Modificar'</strong> que se encuentra ubicada a la derecha de la infomacion que quiere modificar. Al terminar de modificarlo precione el botón <strong>'Guardar'</strong>, de lo contrario precione el botón <strong>'Cancelar'</strong>.</p>
+            <p class="cardt-text">Si quiere eliminar algun registro precione el botón <strong>'Eliminar'</strong> que se encuentra ubicada a lado del botón <strong>'Modificar'</strong>.</p>
+        </div>
+    </div>
+    <div class="card" style="width: 19rem;">
+        <img src="../img/proyecto0.PNG" class="card-img-top" alt="">
+        <div class="card-body">
+            <p class="card-text"><p><strong>PROYECTO:</strong></p></p> 
         </div>
     </div>
 
