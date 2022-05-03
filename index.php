@@ -36,7 +36,7 @@
     <a class="btn btn-dark" href="./pantallas/datos_programador.php">Registros del Programador</a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="./pantallas/proyecto.php">Proyectos</a>
+    <a class="btn btn-dark" href="./pantallas/datosProyecto.php">Proyectos</a>
   </li>
 </ul>
 </div>

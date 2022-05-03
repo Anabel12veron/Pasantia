@@ -4,33 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Eliminar</title>
+    <title>Agregado</title>
 </head>
 <body>
+<?php
 
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="../base_de_datos/eliminarProyecto.php"/></svg>
-    <div>
-        Se ha eliminado una información ✔
-    </div>
-    </div>
-    <?php
-    
-    require "../base_de_datos/Conexion.php";
+require ("../base_de_datos/Conexion.php");
 
-	$programador=$_GET["id"];
+//print_r($_POST);
+    $Nombre_Modulo = $_POST['Nombre_Modulo'];
+    $Descripcion = $_POST['Descripcion'];
+    $Sistema = $_POST['Sistema'];
+    $Estado = $_POST['Estado'];
 
-    $eliminar= "DELETE FROM proyecto Where ID_Proyecto = $programador";
+$agregar = "INSERT INTO modulo (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre_Modulo', '$Descripcion', '$Sistema', '$Estado')";
+$resultado = $mysqli->query($agregar) or die ($mysqli->error);
+?>
 
-    $resultado=$mysqli->query($eliminar);
 
-    ?>
-    <a href="../pantallas/datosProyecto.php"><button class="btn btn-success">Ir a la Lista</button></a>
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
-

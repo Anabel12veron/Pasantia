@@ -10,62 +10,38 @@
     <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 <body class="fondo">
-<h1 class="text-center">Modifique la Información</h1>
+<h1 class="text-center">Modifique el Proyecto</h1>
 	<?php
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
-      $sql = "SELECT * FROM modulo, proyecto where ID_Modulo, ID_Proyecto = $id";
+      $sql = "SELECT * FROM proyecto where ID_Proyecto = $id";
     	$result = $mysqli->query($sql);
     	$dato = mysqli_fetch_assoc($result);
 	?>
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="../base_de_datos/crud_proyecto.php?id=<?php echo $dato['ID_Modulo, ID_Proyecto']?>" method="POST" >
+    <form action="../base_de_datos/crud_Proyecto.php?id=<?php echo $dato['ID_Proyecto']?>" method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="update">
       <div class="container" style="background-color: #ffffff; padding: 25px">
       <div class="mb-3 row">
-        <label for="Nombre_Apellido" class="col-sm-1-12 col-form-label">Nombre y Apellido</label>
+        <label for="ID_Modulo" class="col-sm-1-12 col-form-label">ID_Modulo</label>
         <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Nombre_Apellido" id="Nombre_Apellido" value="<?php echo $dato['Nombre_Apellido']?>">
+          <input type="text" class="form-control" name="ID_Modulo" id="ID_Modulo" value="<?php echo $dato['ID_Modulo']?>">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Nombre_Modulo" class="col-sm-1-12 col-form-label">Nombre del Modulo</label>
+        <label for="ID_Persona" class="col-sm-1-12 col-form-label">ID_Persona</label>
         <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Nombre" id="Nombre_Modulo" value="<?php echo $dato['Nombre_Modulo']?>">
+          <input type="text" class="form-control" name="ID_Persona" id="ID_Persona" value="<?php echo $dato['ID_Persona']?>">
         </div>
       </div>
-      <div class="mb-3 row">
-        <label for="Decripcion" class="col-sm-1-12 col-form-label">Descripcion</label>
-        <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Descripcion" id="Descripcion" value="<?php echo $dato['Descripcion']?>">
-        </div>
       </div>
-      <div class="mb-3 row">
-        <label for="Sistema" class="col-sm-1-12 col-form-label">Sistema</label>
-        <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Sistema" id="Sistema" value="<?php echo $dato['Sistema']?>">
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="Estado" class="col-sm-1-12 col-form-label">Estado</label>
-        <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Estado" id="Estado" value="<?php echo $dato['Estado']?>">
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="Tarea" class="col-sm-1-12 col-form-label">Tarea</label>
-        <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Tarea" id="Tarea" value="<?php echo $dato['Tarea']?>">
-        </div>
-      </div>
-       </div>
       </div>
       </fieldset>
       <div class="m-3 row">
         <div class="text-center">
           <button name="actualizar" class="btn btn-success" role="button">Guardar</button>
           
-          <a name="" id="" class="btn btn-danger" href="../pantallas/proyecto.php" role="button">Cancelar</a>
+          <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button">Cancelar</a>
         </div>
       </div>
     </form>
