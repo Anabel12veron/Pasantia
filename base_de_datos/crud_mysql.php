@@ -34,7 +34,7 @@ if (isset($_POST['action'])) {
     } else {
         // update
         $actualizar = "UPDATE persona SET
-                       Nombre = '$Nombre', Apellido = '$Apellido', F_Nacimiento = '$F_Nacimiento', DNI = $DNI, Sexo = '$Sexo'
+                       Nombre = '$Nombre', Apellido = '$Apellido', F_Nacimiento = '$F_Nacimiento', DNI = '$DNI', Sexo = '$Sexo'
                        WHERE ID_Persona =  $ID_Persona";
         $resultado = $mysqli->query($actualizar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se modificó con exito';
