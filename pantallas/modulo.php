@@ -19,7 +19,7 @@
   <h1 class="text-center">Registro del Modulo</h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="../base_de_datos/crud_Modulo.php"  method="POST" >
+    <form action="../base_de_datos/agregarModulo.php"  method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre_Modulo" class="col-sm-1-12 col-form-label">Nombre del Modulo</label>

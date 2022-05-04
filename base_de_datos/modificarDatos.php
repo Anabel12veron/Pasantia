@@ -14,7 +14,7 @@
 	<?php
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
-        $sql = "SELECT * FROM persona where ID_Persona = $id";
+      $sql = "SELECT * FROM persona where ID_Persona = $id";
     	$resultado = $mysqli->query($sql);
     	$dato = mysqli_fetch_assoc($resultado);
 	?>

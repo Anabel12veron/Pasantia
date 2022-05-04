@@ -19,7 +19,7 @@
     	$dato = mysqli_fetch_assoc($result);
 	?>
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="../base_de_datos/crud_Proyecto.php?id=<?php echo $dato['ID_Proyecto']?>" method="POST" >
+    <form action="...php?id=<?php echo $dato['ID_Proyecto']?>" method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="update">
       <div class="container" style="background-color: #ffffff; padding: 25px">
       <div class="mb-3 row">

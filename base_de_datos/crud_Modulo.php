@@ -23,14 +23,18 @@ if (isset($_POST['action'])) {
 
     if ($ID_Modulo == "") {
         // insert
-        $agregar = "INSERT INTO modulo, (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre', '$Descripcion','$Sistema', '$Estado')";
+        $agregar = "INSERT INTO modulo (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre', '$Descripcion','$Sistema', '$Estado')";
         $resultado = $mysqli->query($agregar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se agrego con éxito';
     } else {
         // update
         $actualizar = "UPDATE modulo SET
-                       Nombre_Modulo = '$Nombre', Descripcion = '$Descripcion', Sistema = '$Sistema' Estado = '$Estado'
-                       WHERE ID_Modulo=  $ID_Modulo";
+                                Nombre_Modulo = '$Nombre', 
+                                Descripcion = '$Descripcion', 
+                                Sistema = '$Sistema', 
+                                Estado = '$Estado'
+                       WHERE ID_Modulo =  $ID_Modulo";
+
         $resultado = $mysqli->query($actualizar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se modificó con exito';
     }
