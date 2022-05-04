@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
+  <title>Registro del Proyecto</title>
   <!-- Bootstrap CSS v5.0.2 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/estiloInicio.css">
@@ -12,59 +12,37 @@
 <body class="fondo">
 <?php 
   require ("../base_de_datos/Conexion.php");
-  $sql= 'SELECT * FROM persona';
+  $sql= 'SELECT * FROM proyecto';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>
  
-  <h1 class="text-center">Registro de Datos</h1>
+  <h1 class="text-center">Registro del Proyecto</h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="../base_de_datos/crud_mysql.php"  method="POST" >
+    <form action="../base_de_datos/agregarProyecto.php"  method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
-        <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
+        <label for="ID_Modulo" class="col-sm-1-12 col-form-label">ID_Modulo</label>
         <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su Nombre completo">
+          <input type="text" class="form-control" name="ID_Modulo" id="ID_Modulo">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Apellido" class="col-sm-1-12 col-form-label">Apellido</label>
+        <label for="ID_Persona" class="col-sm-1-12 col-form-label">ID_Persona</label>
         <div class="col-sm-1-12">
-          <input type="text" class="form-control" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
+          <input type="text" class="form-control" name="ID_Persona" id="ID_Persona">
         </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="F_Nacimiento" class="col-sm-1-12 col-form-label">Fecha de Nacimiento</label>
-        <div class="col-sm-1-12">
-          <input type="date" class="form-control" name="F_Nacimiento" id="F_Nacimiento" placeholder="">
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="DNI" class="col-sm-1-12 col-form-label">DNI</label>
-        <div class="col-sm-1-12">
-          <input type="number" class="form-control" name="DNI" id="DNI" placeholder="Ingrese su numero de documento">
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="Sexo" class="col-sm-1-12 col-form-label">Sexo</label>
-        <select class="form-select" aria-label="Default select example"  name="Sexo" id="Sexo" >
-          <option value="Masculino">Masculino</option>
-          <option value="Femenino">Femenino</option>
-        </select>
-      </div> 
       </div>
       </div>
       </fieldset>
       <div class="m-3 row">
         <div class="text-center">
           <button class="btn btn-success" role="button">Agregar</button>
-          <a name="" id="" class="btn btn-danger" href="../index.php" role="button">Cancelar</a>
+          <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button">Cancelar</a>
         </div>
       </div>
     </form>
   </div>
-
-
 
 
 <!-- Bootstrap JavaScript Libraries -->

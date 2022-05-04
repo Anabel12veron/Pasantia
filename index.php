@@ -16,26 +16,27 @@
     <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
     <div class="container">
     <h2 class="text-center">UPSTI "Unidad Provincial de Sistema y Tecnologia de Información"</h2>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        <!-- <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
     </div>
     </nav>
 
 <ul class="nav nav-pills nav-fill">
 <div class="btn-group" role="group" aria-label="Basic example">
   <li class="btn btn-dark">
-    <a class="btn btn-dark" aria-current="page" href="index.php">Información</a>
+    <a class="btn btn-dark" aria-current="page" href="./pantallas/informacio.php">Información</a>
   </li>
   <li class="btn btn-dark">
     <a class="btn btn-dark" href="./pantallas/persona.php">Registrar</a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="./pantallas/datos_programador.php">Registros del Programadores</a>
+    <a class="btn btn-dark" href="./pantallas/datos_programador.php">Registros del Programador</a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark">Proyectos</a>
+    <a class="btn btn-dark" href="./pantallas/datosProyecto.php">Proyectos</a>
   </li>
 </ul>
 </div>

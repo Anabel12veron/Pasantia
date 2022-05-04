@@ -1,53 +1,54 @@
-<?php
+<?php 
 
 require("../base_de_datos/Conexion.php");
 
 
-// Datos de la persona
-$Nombre = (isset($_POST['Nombre']))? $_POST['Nombre'] : "";
-$Apellido = (isset($_POST['Apellido']))? $_POST['Apellido'] : "";
-$F_Nacimiento = (isset($_POST['F_Nacimiento']))? $_POST['F_Nacimiento'] : "";
-$DNI = (isset($_POST['DNI']))? $_POST['DNI'] : "";
-$Sexo = (isset($_POST['Sexo']))? $_POST['Sexo'] : "";
+// Datos del proyecto
+$Nombre = (isset($_POST['Nombre_Modulo']))? $_POST['Nombre_Modulo'] : "";
+$Descripcion = (isset($_POST['Descripcion']))? $_POST['Descripcion'] : "";
+$Sistema = (isset($_POST['Sistema']))? $_POST['Sistema'] : "";
+$Estado = (isset($_POST['Estado']))? $_POST['Estado'] : "";
 
-$ID_Persona = "";
+$ID_Modulo = "";
 
-if(isset($_POST['Nombre']))
+if(isset($_POST['Nombre_Modulo']))
 
 if ($_POST['action'] != 'insert'){
-    $ID_Persona = $_GET["id"];
+    $ID_Modulo = $_GET["id"];
 }
 
 // Validaciones
 
-
-// 
-
-
 if (isset($_POST['action'])) {
 
-    if ($ID_Persona == "") {
+    if ($ID_Modulo == "") {
         // insert
-        $agregar = "INSERT INTO persona (Nombre, Apellido, F_Nacimiento, DNI, Sexo) VALUES ('$Nombre', '$Apellido', '$F_Nacimiento', $DNI, '$Sexo')";
+        $agregar = "INSERT INTO modulo (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre', '$Descripcion','$Sistema', '$Estado')";
         $resultado = $mysqli->query($agregar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se agrego con éxito';
     } else {
         // update
-        $actualizar = "UPDATE persona SET
-                       Nombre = '$Nombre', Apellido = '$Apellido', F_Nacimiento = '$F_Nacimiento', DNI = '$DNI', Sexo = '$Sexo'
-                       WHERE ID_Persona =  $ID_Persona";
+        $actualizar = "UPDATE modulo SET
+                                Nombre_Modulo = '$Nombre', 
+                                Descripcion = '$Descripcion', 
+                                Sistema = '$Sistema', 
+                                Estado = '$Estado'
+                       WHERE ID_Modulo =  $ID_Modulo";
+
         $resultado = $mysqli->query($actualizar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se modificó con exito';
     }
 } else {
     // delete
     
-    $eliminar= "DELETE FROM persona Where ID_Persona = $ID_Persona";
+    $eliminar= "DELETE FROM modulo Where ID_Modulo = $ID_Modulo";
     $resultado=$mysqli->query($eliminar);
     $mensaje_de_exito = 'Se eliminó con exito';
 }
 
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -57,7 +58,7 @@ if (isset($_POST['action'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Datos de Programador</title>
+    <title>Datos</title>
 </head>
 <body>
 
@@ -68,13 +69,10 @@ if (isset($_POST['action'])) {
     </div>
     </div>
 
-    <a href="../pantallas/datos_programador.php"><button class="btn btn-success">Ir a la Lista</button></a>
+    <a href="../pantallas/datosProyecto.php"><button class="btn btn-success">Ir a la Lista</button></a>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
 
