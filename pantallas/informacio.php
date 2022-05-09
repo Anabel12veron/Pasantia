@@ -84,12 +84,17 @@
             <p class="cardt-text">Si decea ver los datos guardados has click en el botón <strong>"Registros del Programador"</strong> que se encuentra a lado del botón <strong>'Registrar'</strong> ubicado en la pantalla de Inicio. Al precionarlo visualizará todos datos ya registardos por el formulario.</p>
             <p class="cardt-text">Si quiere modificar alguno de los datos ya cargados, precione el botón <strong>'Modificar'</strong> que se encuentra ubicada a la derecha de la infomacion que quiere modificar. Al terminar de modificarlo precione el botón <strong>'Guardar'</strong>, de lo contrario precione el botón <strong>'Cancelar'</strong>.</p>
             <p class="cardt-text">Si quiere eliminar algun registro precione el botón <strong>'Eliminar'</strong> que se encuentra ubicada a lado del botón <strong>'Modificar'</strong>.</p>
+            <p class="cardt-text"> Si desea buscar un programador de foma rapida, lo puede buscar en el buscador que se encuentra encima de la tabla</p>
         </div>
     </div>
     <div class="card" style="width: 19rem;">
         <img src="../img/proyecto0.PNG" class="card-img-top" alt="">
         <div class="card-body">
-            <p class="card-text"><p><strong>PROYECTO:</strong></p></p> 
+            <p class="card-text"><p><strong>PROYECTO:</strong></p></p>
+            <p class="cardt-text">Si decea ver los Proyectos de cada uno de los programdores, pulse el botón <strong>"Proyectos"</strong> que se encuentra en la pantalla de inicio. Si desea buscar un proyecto o modulo especifico lo puede buscar en el buscador que se encuentra encima de la tabla </p> 
+            <p class="cardt-text">Si desea modificar algunos de los datos de la tabla "Modulo" o "Proyecto", precione el botón <strong>'Modificar'</strong>. Al terminar de modificarlo precione el botón <strong>'Guardar'</strong>, de lo contrario precione el botón <strong>'Cancelar'</strong>.</p>
+            <p class="cardt-text">Si quiere eliminar algunos datos de la tabla "Modulo" o "Proyecto", precione el botón <strong>'Eliminar'</strong> que se encuentra ubicada a lado del botón <strong>'Modificar'</strong>.</p>
+            <p class="cardt-text">Si desea agregar un Modulo o Proyecto hacer click en donde dice <strong>'Agregar Modulo'</strong> o <strong>'Agregar Proyecto'</strong>. </p>
         </div>
     </div>
 

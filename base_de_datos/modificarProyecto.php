@@ -15,11 +15,11 @@
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
       $sql = "SELECT * FROM proyecto where ID_Proyecto = $id";
-    	$result = $mysqli->query($sql);
-    	$dato = mysqli_fetch_assoc($result);
+    	$resultado = $mysqli->query($sql);
+    	$dato = mysqli_fetch_assoc($resultado);
 	?>
   <!--Formulatio y Dirección donde se hace el registro -->
-    <form action="...php?id=<?php echo $dato['ID_Proyecto']?>" method="POST" >
+    <form action="../base_de_datos/crud_Proyecto.php?id=<?php echo $dato['ID_Proyecto']?>" method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="update">
       <div class="container" style="background-color: #ffffff; padding: 25px">
       <div class="mb-3 row">

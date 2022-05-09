@@ -14,7 +14,7 @@
 	<?php
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
-        $sql = "SELECT * FROM modulo where ID_Modulo = $id";
+      $sql = "SELECT * FROM modulo where ID_Modulo = $id";
     	$resultado = $mysqli->query($sql);
     	$dato = mysqli_fetch_assoc($resultado);
 	?>
