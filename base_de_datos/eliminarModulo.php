@@ -10,7 +10,7 @@
 <body>
 
     <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="../base_de_datos/eliminarModulo.php"/></svg>
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"></svg>
     <div>
         Se ha eliminado una información ✔
     </div>
