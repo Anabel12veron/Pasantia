@@ -11,57 +11,11 @@
     <link rel="stylesheet" href="../jquery.dataTables.min.css">
 </head>
 <body class="fondo">
-<div>
-    <h1 class="text-center">Proyecto</h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
-    <a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button">Agregar Proyecto</a>
-</div>
 
-<div class="container">
-        <div class="table-responsive" style="background-color: white; padding: 15px">
-            <?php
-            require("../base_de_datos/Conexion.php");
-            $sql = 'SELECT * FROM proyecto';
-            $result = $mysqli->query($sql) or die($mysqli->error);
-            ?>
-
-            <table class="table table-striped" id="TABLA_PROYECTO">
-                <thead>
-                    <tr>
-                        <th hidden>id</th>
-                        <th><strong>Modulo</strong></th>
-                        <th><strong>Persona</strong></th>
-                        <th><strong>Eliminar</strong></th>
-                        <th><strong>Modificar</strong></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php while ($programador = mysqli_fetch_assoc($result)) { ?>
-                        <tr id="<?php $programador['ID_Proyecto']; ?>">
-                            <td hidden><?php echo $programador["ID_Proyecto"]; ?></td>
-                            <td><?php echo $programador["ID_Modulo"]; ?></td>
-                            <td><?php echo $programador["ID_Persona"]; ?></td>
-                            <td>
-                                <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=", $programador['ID_Proyecto']; ?>">
-                                    <button class="btn btn-danger">Eliminar</button>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="<?php echo "../base_de_datos/modificarProyecto.php?id=", $programador['ID_Proyecto']; ?>">
-                                    <button class="btn btn-primary">Modificar</button>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-            </table>
-        </div>
-</div>
 
 <div class="container">
 <h1 class="text-center">Modulo</h1>
+<a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
 <a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button">Agregar Modulo</a>
         <div class= "table-responsive" style="background-color: white; padding: 15px">
             <?php
@@ -107,6 +61,49 @@
             </table>
         </div>
 
+</div>
+
+
+<div>
+    <h1 class="text-center">Proyecto</h1>
+</div>
+
+<div class="container">
+<a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button">Agregar Proyecto</a>
+        <div class="table-responsive" style="background-color: white; padding: 15px">
+            <?php
+            require("../base_de_datos/Conexion.php");
+            $sql = 'SELECT * FROM proyecto';
+            $result = $mysqli->query($sql) or die($mysqli->error);
+            ?>
+
+            <table class="table table-striped" id="TABLA_PROYECTO">
+                <thead>
+                    <tr>
+                        <th hidden>id</th>
+                        <th><strong>Modulo</strong></th>
+                        <th><strong>Persona</strong></th>
+                        <th><strong>Eliminar</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($programador = mysqli_fetch_assoc($result)) { ?>
+                        <tr id="<?php $programador['ID_Proyecto']; ?>">
+                            <td hidden><?php echo $programador["ID_Proyecto"]; ?></td>
+                            <td><?php echo $programador["ID_Modulo"]; ?></td>
+                            <td><?php echo $programador["ID_Persona"]; ?></td>
+                            <td>
+                                <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=", $programador['ID_Proyecto']; ?>">
+                                    <button class="btn btn-danger">Eliminar</button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
 </div>
     <!-- Table JavaScript Libraries -->
     <script src="../jquery-3.5.1.js"></script>

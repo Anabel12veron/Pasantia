@@ -24,3 +24,14 @@ h1{
     /* -webkit-box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); 
 box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
 }
+
+.modal-dialog {
+    max-width: 670px;
+    margin: 1.75rem auto;
+  }
+
+.focus-tr:hover{
+    background-color: rgb(167, 79, 16);
+    cursor: pointer ;
+}
+
