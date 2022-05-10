@@ -11,7 +11,7 @@
  
 </head>
 <body class="fondo">
-<h1 class="text-center">Formulario</h1>
+<h1 class="text-center">INICIO</h1>
 
     <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
     <div class="container">
@@ -37,6 +37,9 @@
   </li>
   <li class="btn btn-dark">
     <a class="btn btn-dark" href="./pantallas/datosProyecto.php">Proyectos</a>
+  </li>
+  <li class="btn btn-dark">
+    <a class="btn btn-dark" href="">Comentario</a>
   </li>
 </ul>
 </div>

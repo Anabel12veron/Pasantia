@@ -10,6 +10,12 @@ $F_Nacimiento = (isset($_POST['F_Nacimiento']))? $_POST['F_Nacimiento'] : "";
 $DNI = (isset($_POST['DNI']))? $_POST['DNI'] : "";
 $Sexo = (isset($_POST['Sexo']))? $_POST['Sexo'] : "";
 
+
+
+
+
+
+
 $ID_Persona = "";
 
 if(isset($_POST['Nombre']))
@@ -17,11 +23,8 @@ if(isset($_POST['Nombre']))
 if ($_POST['action'] != 'insert'){
     $ID_Persona = $_GET["id"];
 }
-
 // Validaciones
 
-
-// 
 
 
 if (isset($_POST['action'])) {
