@@ -11,7 +11,8 @@
 </head>
 
 <body class="fondo">
-    <h1 class="text-center">Comentarios</h1>
+    <h1 class="text-center"><strong> Comentarios </strong></h1>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
 <div class="container" style="background-color: #ffffff; padding: 10px">
     <header></header>
     <nav class="navbar navbar-light navbar-expand-md">
@@ -21,7 +22,7 @@
 <div class="container">
     <div class="col-md-6 pane">
   <div class="col-md-4">
-			<div class="alert alert-light"><h4>Comentarios</h4></div>
+			<div class="alert alert-light"><h4><strong> Comentarios </strong></h4></div>
 			</div>
 			<div id="result"> 
 		</div>
@@ -29,14 +30,14 @@
     <div class="form-contro">
         <form>
             <div class="form-group">
-			<label>Nombre</label>
+			<label><strong> Nombre </strong></label>
 			<input class="form-control" type="text"  id="name">
 			</div>
             <div class="form-group">
-			<label>Comentario</label>
+			<label><strong> Comentario </strong></label>
 			<textarea id="comment" class="form-control"></textarea></label>
 			</div>
-			<button type="button" class="btn btn-primary" onclick="commentBox();">Enviar</button>
+			<button type="button" class="btn btn-success" onclick="commentBox();"><strong> Fijar Comentario </strong></button>
         </form>
     </div>
 </div>

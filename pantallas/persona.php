@@ -16,37 +16,37 @@
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>
  
-  <h1 class="text-center">Registro de Datos</h1>
+  <h1 class="text-center"><strong> Registro de Datos </strong></h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
   <!--Formulatio y Dirección donde se hace el registro -->
     <form action="../base_de_datos/crud_mysql.php"  method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
-        <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
+        <label for="Nombre" class="col-sm-1-12 col-form-label"><strong> Nombre </strong></label>
         <div class="col-sm-1-12">
           <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su Nombre completo">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Apellido" class="col-sm-1-12 col-form-label">Apellido</label>
+        <label for="Apellido" class="col-sm-1-12 col-form-label"><strong> Apellido </strong></label>
         <div class="col-sm-1-12">
           <input type="text" class="form-control" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="F_Nacimiento" class="col-sm-1-12 col-form-label">Fecha de Nacimiento</label>
+        <label for="F_Nacimiento" class="col-sm-1-12 col-form-label"><strong> Fecha de Nacimiento </strong></label>
         <div class="col-sm-1-12">
           <input type="date" class="form-control" name="F_Nacimiento" id="F_Nacimiento" placeholder="">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="DNI" class="col-sm-1-12 col-form-label">DNI</label>
+        <label for="DNI" class="col-sm-1-12 col-form-label"><strong> DNI </strong></label>
         <div class="col-sm-1-12">
           <input type="number" class="form-control" name="DNI" id="DNI" placeholder="Ingrese su numero de documento">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Sexo" class="col-sm-1-12 col-form-label">Sexo</label>
+        <label for="Sexo" class="col-sm-1-12 col-form-label"><strong> Sexo </strong></label>
         <select class="form-select" aria-label="Default select example"  name="Sexo" id="Sexo" >
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>

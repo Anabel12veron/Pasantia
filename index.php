@@ -11,11 +11,11 @@
  
 </head>
 <body class="fondo">
-<h1 class="text-center">INICIO</h1>
+<h1 class="text-center"><strong> INICIO </strong></h1>
 
     <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
     <div class="container">
-    <h2 class="text-center">UPSTI "Unidad Provincial de Sistema y Tecnologia de Información"</h2>
+    <h2 class="text-center"><strong> UPSTI "Unidad Provincial de Sistema y Tecnologia de Información" </strong></h2>
         <!-- <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         
             aria-expanded="false" aria-label="Toggle navigation">
@@ -27,19 +27,19 @@
 <ul class="nav nav-pills nav-fill">
 <div class="btn-group" role="group" aria-label="Basic example">
   <li class="btn btn-dark">
-    <a class="btn btn-dark" aria-current="page" href="./pantallas/informacio.php">Información</a>
+    <a class="btn btn-dark" aria-current="page" href="./pantallas/informacio.php"><strong> Información </strong></a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="./pantallas/persona.php">Registrar</a>
+    <a class="btn btn-dark" href="./pantallas/persona.php"><strong> Registrar </strong></a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="./pantallas/datos_programador.php">Registros del Programador</a>
+    <a class="btn btn-dark" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="./pantallas/datosProyecto.php">Proyectos</a>
+    <a class="btn btn-dark" href="./pantallas/datosProyecto.php"><strong> Proyectos </strong></a>
   </li>
   <li class="btn btn-dark">
-    <a class="btn btn-dark" href="./pantallas/comentario.php">Comentario</a>
+    <a class="btn btn-dark" href="./pantallas/comentario.php"><strong> Comentarios </strong></a>
   </li>
 </ul>
 </div>

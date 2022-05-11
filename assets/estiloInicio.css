@@ -22,6 +22,7 @@ h1{
 .container{
     border-radius: 15px ;
     max-width: 740px;
+
     /* -webkit-box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); 
 box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
 }
