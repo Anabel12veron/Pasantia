@@ -21,6 +21,7 @@ h1{
 
 .container{
     border-radius: 15px ;
+    max-width: 740px;
     /* -webkit-box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); 
 box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
 }
@@ -35,3 +36,14 @@ box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
     cursor: pointer ;
 }
 
+
+.form-control {
+    display: block;
+    width: 300%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #101111;
+    background-clip: padding-box;
+    border-radius: .25rem;
+}

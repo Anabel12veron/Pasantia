@@ -128,10 +128,7 @@
     </div>
   </div>
   <!-- Fin de Modal Modulos -->
-
-
-
-
+  
   <h1 class="text-center">Registro del Proyecto</h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
     <!--Formulatio y Dirección donde se hace el registro -->

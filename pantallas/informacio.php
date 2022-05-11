@@ -22,21 +22,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/registro.PNG" class="d-md-block w-100" alt="...">
+                <img src="../img/registro1.PNG" class="d-md-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>"Registrar"</h3>
                     <p>Has clik en el boton "Registrar" si quiere registar sus datos.</p>
                 </div>
             </div>
         <div class="carousel-item">
-            <img src="../img/datos11.PNG" class="d-block w-100" alt="...">
+            <img src="../img/Captura6.PNG" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h4>"Registros del Programador"</h4>
                 <p>Selecione el boton "Resgistro del Programador" si desea visualizar los datos de los Programadores.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../img/proyecto0.PNG" class="d-block w-100" alt="...">
+            <img src="../img/proyecto4.PNG" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h4>"Proyectos"</h4>
                 <p>Si desea ver los Proyectos Actuales de cada Programador has clik en el boton "Proyectos".</p>
@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="card" style="width: 19rem;">
-        <img src="../img/registro.PNG" class="card-img-top" alt="">
+        <img src="../img/registro1.PNG" class="card-img-top" alt="">
         <div class="card-body">
             <p class="card-text"><p><strong>REGISTRAR:</strong></p></p> 
             <p class="cardt-text">Si decea registrarse debe precionar el botón <strong>"Registrar"</strong> que se encuentra en la página inicial. Al precionarlo visualizará un formulario que solicitará su:</p>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="card" style="width: 19rem;">
-        <img src="../img/datos11.PNG" class="card-img-top" alt="">
+        <img src="../img/Captura6.PNG" class="card-img-top" alt="">
         <div class="card-body">
             <p class="card-text"><p><strong>REGISTROS DEL PROGRAMADOR:</strong></p></p> 
             <p class="cardt-text">Si decea ver los datos guardados has click en el botón <strong>"Registros del Programador"</strong> que se encuentra a lado del botón <strong>'Registrar'</strong> ubicado en la pantalla de Inicio. Al precionarlo visualizará todos datos ya registardos por el formulario.</p>
@@ -88,7 +88,7 @@
         </div>
     </div>
     <div class="card" style="width: 19rem;">
-        <img src="../img/proyecto0.PNG" class="card-img-top" alt="">
+        <img src="../img/proyecto4.PNG" class="card-img-top" alt="">
         <div class="card-body">
             <p class="card-text"><p><strong>PROYECTO:</strong></p></p>
             <p class="cardt-text">Si decea ver los Proyectos de cada uno de los programdores, pulse el botón <strong>"Proyectos"</strong> que se encuentra en la pantalla de inicio. Si desea buscar un proyecto o modulo especifico lo puede buscar en el buscador que se encuentra encima de la tabla </p> 
