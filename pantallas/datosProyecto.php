@@ -17,7 +17,7 @@
 <h1 class="text-center">Modulo</h1>
 <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
 <a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button">Agregar Modulo</a>
-        <div class= "table-responsive" style="background-color: white; padding: 15px">
+        <div class= "table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
             $sql = 'SELECT * FROM modulo';
@@ -70,7 +70,7 @@
 
 <div class="container">
 <a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button">Agregar Proyecto</a>
-        <div class="table-responsive" style="background-color: white; padding: 15px">
+        <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
             $sql = 'SELECT * FROM proyecto';

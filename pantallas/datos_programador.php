@@ -16,7 +16,7 @@
     <h1 class="text-center">Datos Registrados</h1>
     <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
     <div class="container">
-        <div class="table-responsive" style="background-color: white; padding: 15px">
+        <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
             $sql = 'SELECT * FROM persona';
