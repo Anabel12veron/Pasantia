@@ -218,6 +218,9 @@
 
     // ============= Se selecciona una persona =============
     function seleccionarPersona(tabla) {
+
+      alert("Hola");
+
       let id_persona = $(tabla).find("#ID_Persona").text();
       let Nombre = $(tabla).find("#nombre_persona").text();
       let Apellido = $(tabla).find("#apellido_persona").text();
@@ -242,7 +245,7 @@
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="../bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 
 </html>

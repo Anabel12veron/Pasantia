@@ -23,25 +23,25 @@
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre_Modulo" class="col-sm-1-12 col-form-label">Nombre del Modulo</label>
-        <div class="col-sm-1-12">
+        <div class="col-sm-4">
           <input type="text" class="form-control" name="Nombre_Modulo" id="Nombre_Modulo" placeholder="Ingrese el nombre del Modulo en que que trabaja">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="Descripcion" class="col-sm-1-12 col-form-label">Descripción</label>
-        <div class="col-sm-1-12">
+        <div class="col-sm-4">
           <input type="text" class="form-control" name="Descripcion" id="Descripcion" placeholder="Ingrese una breve descripción">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="Sistema" class="col-sm-1-12 col-form-label">Sistema</label>
-        <div class="col-sm-1-12">
+        <div class="col-sm-4">
           <input type="text" class="form-control" name="Sistema" id="Sistema" placeholder="Ingrese el nombre del Sistema">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="Estado" class="col-sm-1-12 col-form-label">Estado</label>
-        <div class="col-sm-1-12">
+        <div class="col-sm-4">
           <input type="text" class="form-control" name="Estado" id="Estado" placeholder="Ingrese el estado">
         </div>
       </div>

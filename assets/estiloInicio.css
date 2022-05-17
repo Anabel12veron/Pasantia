@@ -19,9 +19,9 @@ h1{
     margin-left: 14px;
 }
 
-.container{
+.container-2{
     border-radius: 15px ;
-    max-width: 740px;
+    margin: 50px;
 
     /* -webkit-box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); 
 box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
@@ -40,7 +40,7 @@ box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 200%;
     padding: .375rem .75rem;
     line-height: 1.5;
     background-color: #fff;
