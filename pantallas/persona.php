@@ -23,25 +23,25 @@
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre" class="col-sm-1-12 col-form-label"><strong> Nombre </strong></label>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su Nombre completo">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="Apellido" class="col-sm-1-12 col-form-label"><strong> Apellido </strong></label>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="F_Nacimiento" class="col-sm-1-12 col-form-label"><strong> Fecha de Nacimiento </strong></label>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <input type="date" class="form-control" name="F_Nacimiento" id="F_Nacimiento" placeholder="">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="DNI" class="col-sm-1-12 col-form-label"><strong> DNI </strong></label>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <input type="number" class="form-control" name="DNI" id="DNI" placeholder="Ingrese su numero de documento">
         </div>
       </div>

@@ -11,7 +11,6 @@
 </head>
 
 <body class="fondo">
-    <h1 class="text-center"><strong> Comentarios </strong></h1>
     <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
@@ -20,20 +19,20 @@
     $result = $mysqli->query($sql) or die($mysqli->error);
 ?>
     <div class="col-md-6 pane">
-    <div class="container" style="background-color: #ffffff; padding: 25px">
-    <div class="alert alert-light"><h4><strong> Comentarios </strong></h4></div>
+    <div class="container" style="background-color: #ffffff; padding: 10px">
+    <div class="alert alert-light"><h2><strong> Comentarios </strong></h2></div>
     <!--Formulatio y Dirección donde se hace el registro -->
     <form action="../base_de_datos/agregarComentario.php"  method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
         <label for="Nombre_Usuario" class="col-sm-1-12 col-form-label"><strong>Nombre del Usuaio</strong></label>
-        <div class="col-sm-9">
+        <div class="col-sm-11">
           <input type="text" class="form-control" name="Nombre_Usuario" id="Nombre_Usuario" placeholder="Ingrese el nombre de usuario con el que se quiere registar">
         </div>
       </div>
       <div class="mb-3 row">
         <label for="Comentario" class="col-sm-1-12 col-form-label"><strong> Comentario </strong></label>
-        <div class="col-sm-9">
+        <div class="col-sm-11">
           <input type="text" class="form-control" name="Comentario" id="Comentario" placeholder="Ingrese un comentario">
         </div>
         <div class="m-3 row">
@@ -45,8 +44,8 @@
  
 
 <!-- Bootstrap JavaScript Libraries -->
-    <script src="../jquery/3.3.1/jquery.min.js"></script>
-    <script src="../bootstrap.bundle.min.js"></script>
+  <script src="../jquery/3.3.1/jquery.min.js"></script>
+  <script src="../bootstrap.bundle.min.js"></script>
  
 	<script src="../assets/script.js"></script>
 	</div>

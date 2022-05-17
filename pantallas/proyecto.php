@@ -136,7 +136,6 @@
       <label for="ID_Modulo" class="col-sm-1-12 col-form-label"><strong>Modulo</strong></label>
       <div class="col-sm-1-12">
         <input type="text" name="input_modulo" id="input_modulo" data-bs-toggle="modal" data-bs-target="#modal-modulos" />
-
       </div>
     </div>
     <div class="mb-5 row">
@@ -218,8 +217,6 @@
 
     // ============= Se selecciona una persona =============
     function seleccionarPersona(tabla) {
-
-      alert("Hola");
 
       let id_persona = $(tabla).find("#ID_Persona").text();
       let Nombre = $(tabla).find("#nombre_persona").text();

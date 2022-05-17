@@ -28,7 +28,7 @@
             <table class="table table-striped" id="TABLA_MODULO">
                 <thead>
                     <tr>
-                        <th> <strong>Modulo</strong></th>
+                        <th hidden> <strong>Modulo</strong></th>
                         <th> <strong>Nombre del Modulo</strong></th>
                         <th> <strong>Descripcion</strong></th>
                         <th> <strong>Sistema</strong></th>
@@ -40,7 +40,7 @@
                 <tbody>
                     <?php while ($programador = mysqli_fetch_assoc($result)) { ?>
                         <tr>
-                            <td><?php echo $programador["ID_Modulo"]; ?></td>
+                            <td hidden><?php echo $programador["ID_Modulo"]; ?></td>
                             <td><?php echo $programador["Nombre_Modulo"]; ?></td>
                             <td><?php echo $programador["Descripcion"]; ?></td>
                             <td><?php echo $programador["Sistema"]; ?></td>
@@ -65,7 +65,6 @@
 
 </div>
 
-
 <div>
     <h1 class="text-center">Proyecto</h1>
 </div>
@@ -75,27 +74,44 @@
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
-            $sql = 'SELECT * FROM proyecto';
+            $sql = 'SELECT * FROM vista_proyecto';
             $result = $mysqli->query($sql) or die($mysqli->error);
+
             ?>
 
             <table class="table table-striped" id="TABLA_PROYECTO">
                 <thead>
                     <tr>
-                        <th hidden>id</th>
-                        <th><strong>Modulo</strong></th>
-                        <th><strong>Persona</strong></th>
+                        <th hidden><strong>ID_Proyecto</strong></th>
+                        <th><strong>Nombre</strong></th>
+                        <th><strong>Apellido</strong></th>
+                        <th><strong>Dni</strong></th>
+                        <th><strong>Nombre del Modulo</strong></th>
+                        <th><strong>Descripcion del Modulo</strong></th>
+                        <th><strong>Estado del Modulo</strong></th>
                         <th><strong>Eliminar</strong></th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($programador = mysqli_fetch_assoc($result)) { ?>
+                    <?php while ($programador = mysqli_fetch_assoc($result)) { 
+                        
+                        if(strlen($programador["MODULO_DESCRI"]) >50 ){
+                            $MODULO_DESCRI = substr($programador["MODULO_DESCRI"], 0 ,50)."...";
+                        }else{
+                            $MODULO_DESCRI = $programador["MODULO_DESCRI"];
+                        }
+                    ?>
                         <tr id="<?php $programador['ID_Proyecto']; ?>">
                             <td hidden><?php echo $programador["ID_Proyecto"]; ?></td>
-                            <td><?php echo $programador["ID_Modulo"]; ?></td>
-                            <td><?php echo $programador["ID_Persona"]; ?></td>
+                            <td><?php echo $programador["NOMBRE_PERSONA"]; ?></td>
+                            <td><?php echo $programador["APELLIDO_PERSONA"]; ?></td>
+                            <td><?php echo $programador["DNI_PERSONA"]; ?></td>
+                            <td><?php echo $programador["MODULO_NOMBRE"]; ?></td>
+                            <td><?php echo  $MODULO_DESCRI ?></td>
+                            <td><?php echo $programador["MODULO_ESTADO"]; ?></td>   
                             <td>
-                                <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=", $programador['ID_Proyecto']; ?>">
+                                <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=", $programador[ 'ID_Proyecto']; ?>">
                                     <button class="btn btn-danger">Eliminar</button>
                                 </a>
                             </td>
@@ -113,7 +129,7 @@
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  
+
     <script>
         $(document).ready(function() {
 
