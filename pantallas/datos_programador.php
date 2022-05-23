@@ -14,8 +14,8 @@
 </head>
 
 <body class="fondo">
-    <h1 class="text-center">Datos Registrados</h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
+    <h1 class="text-center"><strong> Datos Registrados </strong></h1>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
     <div class="m-3">
         <div class="table-responsive" style="background-color: white; padding: 15px">
             <?php
@@ -50,12 +50,12 @@
                             <td><?php echo $programador["Sexo"]; ?></td>
                             <td>
                                 <a href="<?php echo "../base_de_datos/eliminarDatos.php?id=", $programador['ID_Persona']; ?>">
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button class="btn btn-danger"><strong> Eliminar </strong></button>
                                 </a>
                             </td>
                             <td>
                                 <a href="<?php echo "../base_de_datos/modificarDatos.php?id=", $programador['ID_Persona']; ?>">
-                                    <button class="btn btn-primary">Modificar</button>
+                                    <button class="btn btn-primary"><strong> Modificar </strong></button>
                                 </a>
                             </td>
                         </tr>

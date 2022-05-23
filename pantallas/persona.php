@@ -57,8 +57,8 @@
       </fieldset>
       <div class="m-3 row">
         <div class="text-center">
-          <button class="btn btn-success" role="button">Agregar</button>
-          <a name="" id="" class="btn btn-danger" href="../index.php" role="button">Cancelar</a>
+          <button class="btn btn-success" role="button"><strong> Guardar </strong></button>
+          <a name="" id="" class="btn btn-danger" href="../index.php" role="button"><strong> Cancelar </strong></a>
         </div>
       </div>
     </form>

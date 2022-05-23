@@ -12,7 +12,7 @@
 <body class="fondo">
     <div>
     <h1 class="text-center"><strong> Información </strong></h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
     </div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -24,21 +24,21 @@
             <div class="carousel-item active">
                 <img src="../img/registro1.PNG" class="d-md-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>"Registrar"</h3>
+                    <h3><strong> "Registrar" </strong></h3>
                     <p>Has clik en el boton "Registrar" si quiere registar sus datos.</p>
                 </div>
             </div>
         <div class="carousel-item">
             <img src="../img/Captura6.PNG" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h4>"Registros del Programador"</h4>
+                <h4><strong> "Registros del Programador" </strong></h4>
                 <p>Selecione el boton "Resgistro del Programador" si desea visualizar los datos de los Programadores.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="../img/proyecto4.PNG" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h4>"Proyectos"</h4>
+                <h4><strong> "Proyectos" </strong></h4>
                 <p>Si desea ver los Proyectos Actuales de cada Programador has clik en el boton "Proyectos".</p>
             </div>
         </div>

@@ -11,7 +11,8 @@
 </head>
 
 <body class="fondo">
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
+    
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
     require("../base_de_datos/Conexion.php");
@@ -37,6 +38,7 @@
         </div>
         <div class="m-3 row">
         <div class="text-center">
+        <a name="" id="" class="btn btn-primary m-3" href="../pantallas/datos_comentario.php" role="button"><strong> Ver Comentarios </strong></a>
           <button class="btn btn-success" role="button"><strong> Fijar Comentario </strong></button>
         </div>
 </div>

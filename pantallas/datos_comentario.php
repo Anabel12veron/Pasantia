@@ -11,8 +11,8 @@
 </head>
 
 <body class="fondo">
-    <h1 class="text-center">Comentarios Fijados</h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../pantallas/comentario.php" role="button">Volver</a>
+    <h1 class="text-center"><strong> Comentarios Fijados </strong></h1>
+    <a name="" id="" class="btn btn-dark m-3" href="../pantallas/comentario.php" role="button"><strong> Volver </strong></a>
     <div class="container">
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
@@ -39,7 +39,7 @@
                             <td><?php echo $programador["Comentario"]; ?></td>
                             <td>
                                 <a href="<?php echo "../base_de_datos/eliminarComentario.php?id=", $programador['ID_Comentario']; ?>">
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button class="btn btn-danger"><strong> Eliminar </strong></button>
                                 </a>
                             </td>
                         </tr>

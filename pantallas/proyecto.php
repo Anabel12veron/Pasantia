@@ -70,7 +70,7 @@
           </table>
         </div>
         <div class="modal-footer">
-        <a class="btn btn-success" href="../pantallas/persona.php" role="button">Agregar</a>
+        <a class="btn btn-success" href="../pantallas/persona.php" role="button"><strong> Guardar </strong></a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar_modal_personas">
             Cerrar
           </button>
@@ -129,7 +129,7 @@
   </div>
   <!-- Fin de Modal Modulos -->
   
-  <h1 class="text-center">Registro del Proyecto</h1>
+  <h1 class="text-center"><strong> Registro del Proyecto </strong></h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
     <!--Formulatio y Dirección donde se hace el registro -->
     <div class="mb-5 row">
@@ -154,8 +154,8 @@
   </fieldset>
   <div class="m-3 row">
     <div class="text-center">
-      <button class="btn btn-success" role="button">Agregar</button>
-      <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button">Cancelar</a>
+      <button class="btn btn-success" role="button"><strong> Guardar </strong></button>
+      <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button"><strong> Cancelar </strong></a>
     </div>
   </div>
   </form>

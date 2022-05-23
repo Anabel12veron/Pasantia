@@ -16,9 +16,9 @@
 
 
 <div class="container mb-5">
-<h1 class="text-center">Modulo</h1>
-<a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button">Volver al Inicio</a>
-<a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button">Agregar Modulo</a>
+<h1 class="text-center"><strong> Modulo </strong></h1>
+<a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
+<a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Modulo </strong></a>
         <div class= "table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
@@ -47,12 +47,12 @@
                             <td><?php echo $programador["Estado"]; ?></td>
                             <td>
                                 <a href="<?php echo "../base_de_datos/eliminarModulo.php?id=", $programador['ID_Modulo']; ?>">
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button class="btn btn-danger"><strong> Eliminar </strong></button>
                                 </a>
                             </td>
                             <td>
                                 <a href="<?php echo "../base_de_datos/modificarModulo.php?id=", $programador['ID_Modulo']; ?>">
-                                    <button class="btn btn-primary">Modificar</button>
+                                    <button class="btn btn-primary"><strong> Modificar </strong></button>
                                 </a>
                             </td>
                         </tr>
@@ -66,11 +66,11 @@
 </div>
 
 <div>
-    <h1 class="text-center">Proyecto</h1>
+    <h1 class="text-center"> <strong> Proyecto </strong></h1>
 </div>
 
 <div class="container mb-5">
-<a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button">Agregar Proyecto</a>
+<a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button"><strong> Agregar Proyecto </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
@@ -112,7 +112,7 @@
                             <td><?php echo $programador["MODULO_ESTADO"]; ?></td>   
                             <td>
                                 <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=", $programador[ 'ID_Proyecto']; ?>">
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button class="btn btn-danger"><strong> Eliminar </strong></button>
                                 </a>
                             </td>
                         </tr>
