@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 <body class="fondo">
-<h1 class="text-center">Modifique sus Datos</h1>
+<h1 class="text-center"><strong> Modifique sus Datos </strong></h1>
 	<?php
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
@@ -23,31 +23,31 @@
     <input type="text" class="form-control" hidden name="action" id="action" value="update">
       <div class="container" style="background-color: #ffffff; padding: 25px">
       <div class="mb-3 row">
-        <label for="Nombre" class="col-sm-1-12 col-form-label">Nombre</label>
-        <div class="col-sm-1-12">
+        <label for="Nombre" class="col-sm-1-12 col-form-label"><strong> Nombre </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Nombre" id="Nombre" value="<?php echo $dato['Nombre']?>" placeholder="">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Apellido" class="col-sm-1-12 col-form-label">Apellido</label>
-        <div class="col-sm-1-12">
+        <label for="Apellido" class="col-sm-1-12 col-form-label"><strong> Apellido </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Apellido" id="Apellido" value="<?php echo $dato['Apellido']?>" placeholder="">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="F_Nacimiento" class="col-sm-1-12 col-form-label">Fecha de Nacimiento</label>
-        <div class="col-sm-1-12">
+        <label for="F_Nacimiento" class="col-sm-1-12 col-form-label"><strong> Fecha de Nacimiento </strong></label>
+        <div class="col-sm-6">
           <input type="date" class="form-control" name="F_Nacimiento" id="F_Nacimiento" value="<?php echo $dato['F_Nacimiento']?>" placeholder="">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="DNI" class="col-sm-1-12 col-form-label">DNI</label>
-        <div class="col-sm-1-12">
+        <label for="DNI" class="col-sm-1-12 col-form-label"><strong> DNI </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="DNI" id="DNI" value="<?php echo $dato['DNI']?>" placeholder="">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Sexo" class="col-sm-1-12 col-form-label">Sexo</label>
+        <label for="Sexo" class="col-sm-1-12 col-form-label"><strong> Sexo </strong></label>
         <select class="form-select" aria-label="Default select example"  name="Sexo" id="Sexo">
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
@@ -59,9 +59,9 @@
       </fieldset>
       <div class="m-3 row">
         <div class="text-center">
-          <button name="actualizar" class="btn btn-success" role="button">Guardar</button>
+          <button name="actualizar" class="btn btn-success" role="button"><strong> Guardar </strong></button>
           
-          <a name="" id="" class="btn btn-danger" href="../pantallas/datos_programador.php" role="button">Cancelar</a>
+          <a name="" id="" class="btn btn-danger" href="../pantallas/datos_programador.php" role="button"><strong> Cancelar </strong></a>
         </div>
       </div>
     </form>

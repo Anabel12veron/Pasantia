@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 <body class="fondo">
-<h1 class="text-center">Modifique el Modulo</h1>
+<h1 class="text-center"><strong> Modifique el Modulo </strong></h1>
 	<?php
 		require '../base_de_datos/Conexion.php';
 		$id=$_GET["id"]; 
@@ -23,26 +23,26 @@
     <input type="text" class="form-control" hidden name="action" id="action" value="update">
       <div class="container" style="background-color: #ffffff; padding: 25px">
       <div class="mb-3 row">
-        <label for="Nombre_Modulo" class="col-sm-1-12 col-form-label">Nombre del Modulo</label>
-        <div class="col-sm-1-12">
+        <label for="Nombre_Modulo" class="col-sm-1-12 col-form-label"><strong> Nombre del Modulo </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Nombre_Modulo" id="Nombre_Modulo" value="<?php echo $dato['Nombre_Modulo']?>">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Descripcion" class="col-sm-1-12 col-form-label">Descripcion</label>
-        <div class="col-sm-1-12">
+        <label for="Descripcion" class="col-sm-1-12 col-form-label"><strong> Descripcion </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Descripcion" id="Descripcion" value="<?php echo $dato['Descripcion']?>">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Sistema" class="col-sm-1-12 col-form-label">Sistema</label>
-        <div class="col-sm-1-12">
+        <label for="Sistema" class="col-sm-1-12 col-form-label"><strong> Sistema </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Sistema" id="Sistema" value="<?php echo $dato['Sistema']?>">
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="Estado" class="col-sm-1-12 col-form-label">Estado</label>
-        <div class="col-sm-1-12">
+        <label for="Estado" class="col-sm-1-12 col-form-label"><strong> Estado </strong></label>
+        <div class="col-sm-6">
           <input type="text" class="form-control" name="Estado" id="Estado" value="<?php echo $dato['Estado']?>">
         </div>
       </div>
@@ -51,9 +51,9 @@
       </fieldset>
       <div class="m-3 row">
         <div class="text-center">
-          <button name="actualizar" class="btn btn-success" role="button">Guardar</button>
+          <button name="actualizar" class="btn btn-success" role="button"><strong> Guardar </strong></button>
           
-          <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button">Cancelar</a>
+          <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button"><strong> Cancelar </strong></a>
         </div>
       </div>
     </form>

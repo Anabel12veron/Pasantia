@@ -39,7 +39,7 @@
                             <td><?php echo $programador["Comentario"]; ?></td>
                             <td>
                                 <a href="<?php echo "../base_de_datos/eliminarComentario.php?id=", $programador['ID_Comentario']; ?>">
-                                    <button class="btn btn-danger"><strong> Eliminar </strong></button>
+                                    <button class="btn btn-danger"><strong> Eliminar</strong> </button>
                                 </a>
                             </td>
                         </tr>
