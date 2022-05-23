@@ -14,7 +14,6 @@
 </head>
 <body class="fondo">
 
-
 <div class="container mb-5">
 <h1 class="text-center"><strong> Modulo </strong></h1>
 <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
@@ -30,7 +29,7 @@
                     <tr>
                         <th hidden> <strong>Modulo</strong></th>
                         <th> <strong>Nombre del Modulo</strong></th>
-                        <th> <strong>Descripcion</strong></th>
+                        <th> <strong>Descripción</strong></th>
                         <th> <strong>Sistema</strong></th>
                         <th> <strong>Estado</strong></th>
                         <th> <strong>Eliminar</strong></th>
@@ -85,9 +84,9 @@
                         <th hidden><strong>ID_Proyecto</strong></th>
                         <th><strong>Nombre</strong></th>
                         <th><strong>Apellido</strong></th>
-                        <th><strong>Dni</strong></th>
+                        <th><strong>DNI</strong></th>
                         <th><strong>Nombre del Modulo</strong></th>
-                        <th><strong>Descripcion del Modulo</strong></th>
+                        <th><strong>Descripción del Modulo</strong></th>
                         <th><strong>Estado del Modulo</strong></th>
                         <th><strong>Eliminar</strong></th>
 
@@ -111,7 +110,7 @@
                             <td><?php echo  $MODULO_DESCRI ?></td>
                             <td><?php echo $programador["MODULO_ESTADO"]; ?></td>   
                             <td>
-                                <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=", $programador[ 'ID_Proyecto']; ?>">
+                                <a href="<?php echo "../base_de_datos/eliminarProyecto.php?id=".$programador[ 'ID_Proyecto']; ?>">
                                     <button class="btn btn-danger"><strong> Eliminar </strong></button>
                                 </a>
                             </td>

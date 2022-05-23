@@ -26,7 +26,7 @@
     $resultado=$mysqli->query($eliminar);
 
     ?>
-    <a href="../pantallas/datos_comentario.php"><button class="btn btn-success">Ir a la Lista</button></a>
+    <a href="../pantallas/datos_comentario.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
