@@ -19,9 +19,9 @@
     
     require "../base_de_datos/Conexion.php";
 
-	$programador=$_GET["id"];
+    $ID_Comentario = $_POST["comment_id"];
 
-    $eliminar= "DELETE FROM comentario Where ID_Comentario = $programador";
+    $eliminar= "DELETE FROM comentario Where ID_Comentario = $ID_Comentario";
 
     $resultado=$mysqli->query($eliminar);
 

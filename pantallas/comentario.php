@@ -16,13 +16,15 @@
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
     require("../base_de_datos/Conexion.php");
-    $sql = 'SELECT * FROM persona';
+    $sql = 'SELECT * FROM comentario';
     $result = $mysqli->query($sql) or die($mysqli->error);
 ?>
+
+<div class="container" style="background-color: #ffffff; padding: 10px">
+<div class="alert alert-light"><h2><strong> Comentarios </strong></h2></div>
+    <!-- La apariencia que tendrá el formulario -->
     <div class="col-md-6 pane">
-    <div class="container" style="background-color: #ffffff; padding: 10px">
-    <div class="alert alert-light"><h2><strong> Comentarios </strong></h2></div>
-    <!--Formulatio y Dirección donde se hace el registro -->
+    <!-- <Formulatio y Dirección donde se hace el registro --> 
     <form action="../base_de_datos/agregarComentario.php"  method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <div class="mb-3 row">
@@ -43,7 +45,9 @@
         </div>
 </div>
 </div>
- 
+
+
+
 
 <!-- Bootstrap JavaScript Libraries -->
   <script src="../jquery/3.3.1/jquery.min.js"></script>

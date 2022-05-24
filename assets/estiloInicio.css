@@ -1,7 +1,7 @@
 h1{
     justify-content: center;
     -ms-flex-align: center;
-    color: rgb(172, 54, 54);
+    color: rgb(255, 255, 255);
 }
 
 .buttons{
@@ -49,4 +49,10 @@ box-shadow: 9px 9px 13px 5px rgba(157, 222, 170, 0.414); */
     color: #101111;
     background-clip: padding-box;
     border-radius: .25rem;
+}
+
+.comment-user{
+    justify-content: center;
+    -ms-flex-align: center;
+    color: rgb(31, 146, 46);
 }

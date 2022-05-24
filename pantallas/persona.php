@@ -17,7 +17,7 @@
 ?>
  
   <h1 class="text-center"><strong> Registro de Datos </strong></h1>
-  <div class="container" style="background-color: #ffffff; padding: 25px">
+  <div class="container" style="background-color: #ffffff; padding: 25px;">
   <!--Formulatio y Dirección donde se hace el registro -->
     <form action="../base_de_datos/crud_mysql.php"  method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="insert">

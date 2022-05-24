@@ -15,9 +15,9 @@
 <body class="fondo">
 
 <div class="container mb-5">
-<h1 class="text-center"><strong> Modulo </strong></h1>
+<h1 class="text-center"><strong> Módulos </strong></h1>
 <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
-<a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Modulo </strong></a>
+<a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Módulo </strong></a>
         <div class= "table-responsive" style="background-color: white; padding: 10px">
             <?php
             require("../base_de_datos/Conexion.php");
@@ -28,7 +28,7 @@
                 <thead>
                     <tr>
                         <th hidden> <strong>Modulo</strong></th>
-                        <th> <strong>Nombre del Modulo</strong></th>
+                        <th> <strong>Nombre del Módulo</strong></th>
                         <th> <strong>Descripción</strong></th>
                         <th> <strong>Sistema</strong></th>
                         <th> <strong>Estado</strong></th>
@@ -65,7 +65,7 @@
 </div>
 
 <div>
-    <h1 class="text-center"> <strong> Proyecto </strong></h1>
+    <h1 class="text-center"> <strong> Proyectos </strong></h1>
 </div>
 
 <div class="container mb-5">
@@ -85,9 +85,9 @@
                         <th><strong>Nombre</strong></th>
                         <th><strong>Apellido</strong></th>
                         <th><strong>DNI</strong></th>
-                        <th><strong>Nombre del Modulo</strong></th>
-                        <th><strong>Descripción del Modulo</strong></th>
-                        <th><strong>Estado del Modulo</strong></th>
+                        <th><strong>Nombre del Módulo</strong></th>
+                        <th><strong>Descripción del Módulo</strong></th>
+                        <th><strong>Estado del Módulo</strong></th>
                         <th><strong>Eliminar</strong></th>
 
                     </tr>
