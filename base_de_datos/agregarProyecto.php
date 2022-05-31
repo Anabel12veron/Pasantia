@@ -17,8 +17,8 @@ Se ha Agregado un Proyecto ✔
 </div>
 <?php
 
-
-require ("../base_de_datos/Conexion.php");
+session_start();
+require ("../base_de_datos/sql_conection.php");
 
 //print_r($_POST);
     $ID_Modulo = $_POST['ID_Modulo'];

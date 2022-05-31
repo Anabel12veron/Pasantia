@@ -16,8 +16,8 @@
     </div>
     </div>
     <?php
-    
-    require "../base_de_datos/Conexion.php";
+    session_start();
+    require "../base_de_datos/sql_conection.php";
 
 	$programador=$_GET["id"];
 

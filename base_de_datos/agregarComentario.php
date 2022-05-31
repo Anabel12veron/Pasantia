@@ -16,8 +16,8 @@ Se ha Agregado un Comentario ✔
 </div>
 </div>
 <?php
-
-require ("../base_de_datos/Conexion.php");
+session_start();
+require ("../base_de_datos/sql_conection.php");
 
 //print_r($_POST);
     $Nombre_Usuario = $_POST['Nombre_Usuario'];

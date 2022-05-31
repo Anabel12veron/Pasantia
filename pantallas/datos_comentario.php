@@ -17,7 +17,8 @@
     <div class="container">
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
-            include_once '../base_de_datos/Conexion.php';
+            session_start();
+            include_once '../base_de_datos/sql_conection.php';
             $sql_sel = "SELECT * FROM comentario ORDER BY ID_Comentario DESC";
             $result = $mysqli->query($sql_sel) or die($mysqli->error);
             $count = $result->num_rows;

@@ -12,7 +12,8 @@
 <body class="fondo">
 <h1 class="text-center"><strong> Modifique el Modulo </strong></h1>
 	<?php
-		require '../base_de_datos/Conexion.php';
+    session_start();
+		require '../base_de_datos/sql_conection.php';
 		$id=$_GET["id"]; 
       $sql = "SELECT * FROM modulo where ID_Modulo = $id";
     	$resultado = $mysqli->query($sql);

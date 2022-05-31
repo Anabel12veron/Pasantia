@@ -11,8 +11,8 @@
 
 <body>
     <?php
-
-    require "../base_de_datos/Conexion.php";
+    session_start();
+    require "../base_de_datos/sql_conection.php";
 
     $id_modulo = $_GET["id"];
     $modulo_sql = "SELECT * FROM proyecto WHERE ID_Modulo = $id_modulo";

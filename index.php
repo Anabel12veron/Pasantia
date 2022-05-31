@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Pagina Principal</title>
     <link rel="stylesheet" href="./assets/estiloInicio.css">
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="./bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  
 </head>
 <body class="fondo">
+    <?php 
+    
+    session_start();
+    
+    ?>
 <h1 class="text-center"><strong> INICIO </strong></h1>
 
     <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">

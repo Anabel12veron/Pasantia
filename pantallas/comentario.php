@@ -15,7 +15,8 @@
     
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
-    require("../base_de_datos/Conexion.php");
+    session_start();
+    require("../base_de_datos/sql_conection.php");
     $sql = 'SELECT * FROM comentario';
     $result = $mysqli->query($sql) or die($mysqli->error);
 ?>

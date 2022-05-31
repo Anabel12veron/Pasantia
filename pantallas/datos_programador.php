@@ -19,7 +19,8 @@
     <div class="m-3">
         <div class="table-responsive" style="background-color: white; padding: 15px">
             <?php
-            require("../base_de_datos/Conexion.php");
+            session_start();
+            require("../base_de_datos/sql_conection.php");
             $sql = 'SELECT * FROM persona';
             $result = $mysqli->query($sql) or die($mysqli->error);
             ?>

@@ -12,7 +12,8 @@
 <body class="fondo">
 <h1 class="text-center"><strong> Modifique sus Datos </strong></h1>
 	<?php
-		require '../base_de_datos/Conexion.php';
+    session_start();
+		require '../base_de_datos/sql_conection.php';
 		$id=$_GET["id"]; 
       $sql = "SELECT * FROM persona where ID_Persona = $id";
     	$resultado = $mysqli->query($sql);

@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 <body class="fondo">
-<?php 
-  require ("../base_de_datos/Conexion.php");
-  $sql= 'SELECT * FROM modulo';
-  $result= $mysqli->query($sql) or die ($mysqli->error);
-?>
+  <?php 
+    session_start();
+    require ("../base_de_datos/sql_conection.php");
+    $sql= 'SELECT * FROM modulo';
+    $result= $mysqli->query($sql) or die ($mysqli->error);
+  ?>
  
   <h1 class="text-center"><strong> Registro del Modulo </strong></h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">

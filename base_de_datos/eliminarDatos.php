@@ -9,8 +9,8 @@
 </head>
 <body>
     <?php
-    
-    require "../base_de_datos/Conexion.php";
+    session_start();
+    require "../base_de_datos/sql_conection.php";
 	$id_persona=$_GET["id"];
     $eliminar_sql = "SELECT * FROM proyecto WHERE ID_Persona = $id_persona";
     $resultado=$mysqli->query($eliminar_sql);
