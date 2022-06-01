@@ -43,14 +43,14 @@
     if(isset($_POST["btnregistrarx"]))
     {
     
-    $queryusuario 	= mysqli_query($mysqli,"SELECT * FROM login WHERE usu = '$nombre'");
-    $nr 			= mysqli_num_rows($queryusuario); 
+    $queryusuario = mysqli_query($mysqli,"SELECT * FROM login WHERE Nombre_Usuario = '$nombre'");
+    $nr = mysqli_num_rows($queryusuario); 
     
     if ($nr == 0)
     {
     
         $pass_fuerte = password_hash($pass, PASSWORD_BCRYPT);
-        $queryregistrar = "INSERT INTO login(usu, pass) values ('$nombre','$pass_fuerte')";
+        $queryregistrar = "INSERT INTO login(Nombre_Usuario, Contrasena) values ('$nombre','$pass_fuerte')";
         
     
     if(mysqli_query($mysqli,$queryregistrar))
@@ -67,9 +67,31 @@
             echo "<script> alert('No puedes registrar a este usuario: $nombre');</script>";
     }
     
-    } 
+
     /*VaidrollTeam*/
-    ?>
+   
+     
+     //verificamos si el user exite con un condicional
+    if (mysqli_num_rows($queryusuario) == 0)
+    {
+    // mysql_num_rows <- esta funcion me imprime el numero de registro que encontro 
+    // si el numero es igual a 0 es porque el registro no exite, en otras palabras ese user no esta en la tabla miembro por lo tanto se puede registrar
+     
+    echo "El Usuario es valido";
+    }
+    
+    else
+    {
+    //caso contario (else) es porque ese user ya esta registrado
+     
+    echo 'El Usuario ya esta registrado, ingresa otro';
+    }
+    }
+?>
+
+
+
+
     <div class="signup-form">
         <form action=""  method="POST" >
             <h2>Iniciar Sesion</h2>

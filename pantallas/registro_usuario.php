@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,15 +13,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../assets/stylo_usuario.css">
 </header>
+
 <body>
-<?php 
+    <?php
 
     require("../base_de_datos/sql_conection.php");
-    $sql= 'SELECT * FROM registro_usuario';
-    $result= $mysqli->query($sql) or die($mysqli->error);
-?>
+    $sql = 'SELECT * FROM registro_usuario';
+    $result = $mysqli->query($sql) or die($mysqli->error);
+
+    ?>
+
     <div class="signup-form">
-        <form action="../base_de_datos/agregar_registro_usuario.php"  method="POST" >
+        <form action="../base_de_datos/agregar_registro_usuario.php" method="POST">
             <h2>Registrar</h2>
             <p class="hint-text">Crea tu cuenta.</p>
             <div class="form-group">
@@ -31,7 +35,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                        <input type="number" class="form-control" name="Celular" placeholder="Celular" required="required">
+                    <input type="text" class="form-control" name="Celular" placeholder="Celular" required="required">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" name="Correo" placeholder="Correo Electronico" required="required">
@@ -41,9 +45,6 @@
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="Confirmar_Contrasena" placeholder="Confirmar Contraseña" required="required">
                 </div>
                 <div class="form-group">
                     <label class="form-check-label">

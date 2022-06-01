@@ -22,18 +22,16 @@
     require("../base_de_datos/sql_conection.php");
     session_start();
     //print_r($_POST);
-    $Nombre_Usuario = $_POST['Nombre_Usuario'];
+    $usuario = (isset($_POST["Nombre_Usuario"])) ? $_POST["Nombre_Usuario"] : '';
     $Celular = $_POST['Celular'];
     $Correo = $_POST['Correo'];
     $Fecha_Nac = $_POST['Fecha_Nac'];
     $Contrasena = password_hash($_POST['Contrasena'], PASSWORD_BCRYPT);
-    $Confirmar_Contrasena = password_hash($_POST['Confirmar_Contrasena'],PASSWORD_BCRYPT);
 
-    $agregar = "INSERT INTO registro_usuario (Nombre_Usuario, Celular, Correo, Fecha_Nac, Contrasena, Confirmar_Contrasena) VALUES ('$Nombre_Usuario', '$Celular', '$Correo', '$Fecha_Nac', '$Contrasena', '$Confirmar_Contrasena')";
+
+    $agregar = "INSERT INTO registro_usuario (Nombre_Usuario, Celular, Correo, Fecha_Nac, Contrasena) VALUES ('$usuario', '$Celular', '$Correo', '$Fecha_Nac', '$Contrasena')";
     $resultado = $mysqli->query($agregar) or die($mysqli->error);
-
     ?>
-
     <!-- <a href="../index.php"><button class="btn btn-success"><strong> Ir a la página </strong></button></a> -->
     <script>
         window.location = "../index.php";

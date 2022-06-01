@@ -59,6 +59,14 @@
 
     <!-- JS es el código JavaScript que se encarga de lanzar el borrado de un comentario mediante la llamada a un PHP -->
     <script>
+        function msg_alert(msg='',type='danger'){
+            //Si no, nos agrega un cartel de error.
+            $(".container").before('<div id="msg-alert" class="alert alert-'+type+' d-flex align-items-center" role="alert"><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="'+type+'"></svg><div>'+msg+'</div></div>')
+            //Y elimina el cartel luego de 5 seg.
+            setTimeout(function(){
+                $("#msg-alert").remove();
+            },5000)
+        }
         function deletecomment(id) {
 
 
@@ -77,7 +85,7 @@
                        
                         //Si la respues es satifactoria.
                         if (data.respuesta == "succes") {
-
+                            msg_alert("alerta de eliminanción", 'succes');
                             //Se elimina el comentario de la pantalla.
                             //Para no tener que recargar toda la página.
                             $("#comment-" + id).remove();
