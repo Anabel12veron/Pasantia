@@ -73,7 +73,6 @@
 <a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button"><strong> Agregar Proyecto </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
-            session_start();
             require("../base_de_datos/sql_conection.php");
             $sql = 'SELECT * FROM vista_proyecto';
             $result = $mysqli->query($sql) or die($mysqli->error);

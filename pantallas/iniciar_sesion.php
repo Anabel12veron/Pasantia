@@ -15,22 +15,22 @@
 <body>
 <?php 
     require("../base_de_datos/sql_conection.php");
-    $nombre = (isset($_POST["Nombre_Usuario"]))? $_POST["Nombre_Usuario"] : '' ;
-    $pass 	= (isset($_POST["Contrasena"]))? $_POST["Contrasena"] : '' ;
+    $nombre_Usuario = (isset($_POST["Nombre_Usuario"]))? $_POST["Nombre_Usuario"] : '' ;
+    $pass = (isset($_POST["Contrasena"]))? $_POST["Contrasena"] : '' ;
     //echo $nombre ;exit;
 
     //Para iniciar sesión
     if(isset($_POST["btnloginx"]))
     {
     
-    $queryusuario = mysqli_query($mysqli,"SELECT * FROM registro_usuario WHERE Nombre_Usuario = '$nombre'");
+    $queryusuario = mysqli_query($mysqli,"SELECT * FROM registro_usuario WHERE Nombre_Usuario = '$nombre_Usuario'");
     $nr = mysqli_num_rows($queryusuario); 
     $usuarios_registros = mysqli_fetch_array($queryusuario); 
         
     if (($nr == 1) && (password_verify($pass,$usuarios_registros['Contrasena'])) )
         { 
             session_start();
-            $_SESSION['nombredelusuario']=$nombre;
+            $_SESSION['nombredelusuario']=$nombre_Usuario;
             header("Location: ../index.php");
         }
     else
@@ -43,19 +43,19 @@
     if(isset($_POST["btnregistrarx"]))
     {
     
-    $queryusuario = mysqli_query($mysqli,"SELECT * FROM login WHERE Nombre_Usuario = '$nombre'");
+    $queryusuario = mysqli_query($mysqli,"SELECT * FROM login WHERE Nombre_Usuario = '$nombre_Usuario'");
     $nr = mysqli_num_rows($queryusuario); 
     
     if ($nr == 0)
     {
     
         $pass_fuerte = password_hash($pass, PASSWORD_BCRYPT);
-        $queryregistrar = "INSERT INTO login(Nombre_Usuario, Contrasena) values ('$nombre','$pass_fuerte')";
+        $queryregistrar = "INSERT INTO login(Nombre_Usuario, Contrasena) values ('$nombre_Usuario','$pass_fuerte')";
         
     
     if(mysqli_query($mysqli,$queryregistrar))
     {
-        echo "<script> alert('Usuario registrado: $nombre');</script>";
+        echo "<script> alert('Usuario registrado: $nombre_Usuario');</script>";
     }
     else 
     {
@@ -64,7 +64,7 @@
     
     }else
     {
-            echo "<script> alert('No puedes registrar a este usuario: $nombre');</script>";
+            echo "<script> alert('No puedes registrar a este usuario: $nombre_Usuario');</script>";
     }
     
 

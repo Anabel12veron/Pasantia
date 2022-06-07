@@ -35,6 +35,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="Apellido" placeholder="Apellido" required="required">
+                </div>
+                <div class="form-group">
                     <input type="text" class="form-control" name="Celular" placeholder="Celular" required="required">
                 </div>
                 <div class="form-group">
