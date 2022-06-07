@@ -29,6 +29,8 @@
     $Fecha_Nac = $_POST['Fecha_Nac'];
     $Contrasena = password_hash($_POST['Contrasena'], PASSWORD_BCRYPT);
 
+
+// Esto es lo que se agrego sobre la validacion.
     // consulta para verificar que el registro no exista
     $validar = "SELECT * FROM registro_usuario WHERE Correo = '$Correo' or Nombre_Usuario = '$usuario'";
     $validando = $mysqli->query($validar);
