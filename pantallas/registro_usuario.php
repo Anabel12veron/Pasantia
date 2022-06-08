@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,11 +19,11 @@
     require("../base_de_datos/sql_conection.php");
     $sql = 'SELECT * FROM registro_usuario';
     $result = $mysqli->query($sql) or die($mysqli->error);
-
     ?>
 
     <div class="signup-form">
-        <form action="../base_de_datos/agregar_registro_usuario.php" method="POST">
+
+        <form action="../base_de_datos/agregar_registro_usuario.php" method="POST" class="needs-validation" novalidate>
             <h2>Registrar</h2>
             <p class="hint-text">Crea tu cuenta.</p>
             <div class="form-group">
@@ -32,25 +31,38 @@
                 <div class="form-group">
                     <div class="form-group">
                         <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Nombre de Usuario" required="required">
+                        <div class="valid-feedback"> ¡Listo!</div>
+                        <div class="invalid-feedback"> Complete el campo. </div>
                     </div>
-                </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
+                    <div class="valid-feedback"> ¡Listo!</div>
+                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="Apellido" placeholder="Apellido" required="required">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="Celular" placeholder="Celular" required="required">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="Correo" placeholder="Correo Electronico" required="required">
+                    <div class="valid-feedback"> ¡Listo!</div>
+                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="date" class="form-control" name="Fecha_Nac" id="Fecha de Nacimiento" placeholder="">
+                    <div class="valid-feedback"> ¡Listo!</div>
+                    <div class="invalid-feedback"> Complete el campo. </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="Celular" placeholder="Celular" required="required">
+                    <div class="valid-feedback"> ¡Listo!</div>
+                    <div class="invalid-feedback"> Complete el campo. </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="Correo" placeholder="Correo Electronico" required="required">
+                    <div class="valid-feedback"> ¡Listo!</div>
+                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
+                    <div class="valid-feedback"> ¡Listo!</div>
+                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <label class="form-check-label">
@@ -62,9 +74,10 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
                 </div>
+                </div>
             </div>
         </form>
-        <div class="text-center">Ya tienes una cuenta?
+        <div class="text-center">¿Ya tienes una cuenta creada?
             <a href="../pantallas/iniciar_sesion.php">Iniciar Sesion</a>
         </div>
     </div>

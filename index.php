@@ -1,3 +1,18 @@
+
+    <!-- // session_start();
+
+    // if (!isset($_SESSION['registro_usuario'])){
+    //     echo '
+    //     <script>
+    //         alert ("POR FAVOR DEBES INICIAR SESIÓN");
+    //         window.location = "./pantallas/iniciar_sesion.php";
+    //     </script>
+    //     ';
+    //     session_destroy();
+    //     die ();
+    // }
+    // Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,21 +26,13 @@
  
 </head>
 <body class="fondo">
-    <?php 
-    
-    session_start();
-    
-    ?>
+
 <h1 class="text-center"><strong> INICIO </strong></h1>
 
     <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
     <div class="container">
     <h2 class="text-center"><strong> UPSTI "Unidad Provincial de Sistema y Tecnologia de Información" </strong></h2>
-        <!-- <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-        
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
+
     </div>
     </nav>
 
@@ -39,6 +46,9 @@
 </div>
 <div class="position-absolute bottom-0 end-0">
     <a class="btn btn-info" href="./pantallas/comentario.php"><strong> Comentarios </strong></a>
+</div>
+<div class="position-absolute top-0 end-0">
+    <a class="btn btn-danger" href="./pantallas/iniciar_sesion.php"><strong> Cerrar Sesión </strong></a>
 </div>
 
 <!-- Bootstrap JavaScript Libraries -->

@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS v5.0.2 -->
-    <link rel="stylesheet" href="../bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Agregado</title>
-</head>
-
-<body>
-    <div class="alert alert-success d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"></svg>
-        <div>
-            Se ha Registrado correctamente ✔
-        </div>
-    </div>
-    <?php
+<?php
     require("../base_de_datos/sql_conection.php");
     session_start();
     //print_r($_POST);
@@ -30,34 +11,57 @@
     $Contrasena = password_hash($_POST['Contrasena'], PASSWORD_BCRYPT);
 
 
-// Esto es lo que se agrego sobre la validacion.
-    // consulta para verificar que el registro no exista
-    $validar = "SELECT * FROM registro_usuario WHERE Correo = '$Correo' or Nombre_Usuario = '$usuario'";
-    $validando = $mysqli->query($validar);
-    if ($validando->num_rows > 0){
-        $mensaje.= "<h5 class= 'text-danger text-center'> El Usuario o el Correo ya se encuentran registrados</h5>";
-    } else {
+
     // Agregar datos 
     $insertar = "INSERT INTO registro_usuario (Nombre_Usuario, Nombre, Apellido, Celular, Correo, Fecha_Nac, Contrasena) VALUES ('$usuario', '$Nombre', '$Apellido', '$Celular', '$Correo', '$Fecha_Nac', '$Contrasena')";
-    $guardando = $mysqli->query($insertar) or die ($mysqli->error);
-    if ($guardando > 0) {
-        $mensaje.="<h5 class= 'text-Sucessos text-center'> Se realizo su registro correctamente</h5>";
+
+    // verificar que el correo no se repita 
+    $verificar_correo = mysqli_query($mysqli, "SELECT * FROM registro_usuario WHERE Correo='$Correo' ");
+
+    if (mysqli_num_rows($verificar_correo) > 0){
+        echo '
+            <script>
+                alert ("Este Correo Electronico ya está registrado. Ingrese otro");
+                window.location = "../pantallas/registro_usuario.php";
+            </script>
+        ';
+        exit();
     }
-    else {
-        $mensaje ="<h5 class= 'text-Sucessos text-center'> No se realizo su registro correctamente</h5>";
+
+    //  verificar que el usuario no se repita 
+    $verificar_usuario = mysqli_query($mysqli, "SELECT * FROM registro_usuario WHERE Nombre_Usuario='$usuario ' ");
+
+    if (mysqli_num_rows($verificar_usuario) > 0){
+        echo '
+            <script>
+                alert ("Este Usuario ya existe. Ingrese otro");
+                window.location = "../pantallas/registro_usuario.php";
+            </script>
+        ';
+        exit();
     }
+
+    // Se agregan los datos 
+    $ejecutar = $mysqli->query($insertar);
+
+
+    if ($ejecutar) {
+        echo '
+        <script>
+            alert ("Usuario almacenado exitosamente");
+            window.location = "./index.php";
+        </script>
+        
+        ';
+    }else {
+        echo '
+        <script>
+            alert ("Intentalo de nuevo, usuario no almacenado");
+            window.location = "./index.php";
+        </script>
+        ';
     }
-    ?>
 
-    <script>
-        window.location = "../index.php";
-    </script>
+    mysqli_close($mysqli)
 
-
-
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
-</html>
+?>

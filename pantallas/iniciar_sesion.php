@@ -14,6 +14,7 @@
 </header>
 <body>
 <?php 
+    session_start();
     require("../base_de_datos/sql_conection.php");
     $nombre_Usuario = (isset($_POST["Nombre_Usuario"]))? $_POST["Nombre_Usuario"] : '' ;
     $pass = (isset($_POST["Contrasena"]))? $_POST["Contrasena"] : '' ;
