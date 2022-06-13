@@ -48,7 +48,7 @@
     <a class="btn btn-info" href="./pantallas/comentario.php"><strong> Comentarios </strong></a>
 </div>
 <div class="position-absolute top-0 end-0">
-    <a class="btn btn-danger" href="./pantallas/iniciar_sesion.php"><strong> Cerrar Sesión </strong></a>
+    <a class="btn btn-danger" href="./pantallas/nombre_usuario.php"><strong> Cerrar Sesión </strong></a>
 </div>
 
 <!-- Bootstrap JavaScript Libraries -->
