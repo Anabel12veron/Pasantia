@@ -20,6 +20,7 @@
 <body class="fondo">
   <?php
   session_start();
+  include "../utils/funciones.php"; 
   require("../base_de_datos/sql_conection.php");
   $sql = 'SELECT * FROM proyecto';
   $result = $mysqli->query($sql) or die($mysqli->error);

@@ -30,8 +30,9 @@
         
     if (($nr == 1) && (password_verify($pass,$usuarios_registros['Contrasena'])) )
         { 
-            session_start();
+         
             $_SESSION['nombredelusuario']=$nombre_Usuario;
+            $_SESSION['registro_usuario'] = $usuarios_registros['Nombre_Usuario'];
             header("Location: ../index.php");
         }
     else
@@ -88,6 +89,7 @@
     echo 'El Usuario ya esta registrado, ingresa otro';
     }
     }
+
 ?>
 
 

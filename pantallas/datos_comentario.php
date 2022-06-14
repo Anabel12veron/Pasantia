@@ -19,6 +19,7 @@
             <?php
             session_start();
             include_once '../base_de_datos/sql_conection.php';
+            include "../utils/funciones.php"; 
             $sql_sel = "SELECT * FROM comentario ORDER BY ID_Comentario DESC";
             $result = $mysqli->query($sql_sel) or die($mysqli->error);
             $count = $result->num_rows;

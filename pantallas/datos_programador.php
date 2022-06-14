@@ -21,6 +21,7 @@
             <?php
             session_start();
             require("../base_de_datos/sql_conection.php");
+            include "../utils/funciones.php"; 
             $sql = 'SELECT * FROM persona';
             $result = $mysqli->query($sql) or die($mysqli->error);
             ?>

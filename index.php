@@ -1,17 +1,9 @@
+<?php
+session_start();
+include "./utils/funciones.php";
 
-    <!-- // session_start();
-
-    // if (!isset($_SESSION['registro_usuario'])){
-    //     echo '
-    //     <script>
-    //         alert ("POR FAVOR DEBES INICIAR SESIÓN");
-    //         window.location = "./pantallas/iniciar_sesion.php";
-    //     </script>
-    //     ';
-    //     session_destroy();
-    //     die ();
-    // }
-    // Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
+?>
+    <!-- // Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +40,8 @@
     <a class="btn btn-info" href="./pantallas/comentario.php"><strong> Comentarios </strong></a>
 </div>
 <div class="position-absolute top-0 end-0">
-    <a class="btn btn-danger" href="./pantallas/nombre_usuario.php"><strong> Cerrar Sesión </strong></a>
+    <a class="btn btn-danger" href="./pantallas/cerrar_sesion.php"><strong> Cerrar Sesión </strong></a>
+    <input type="hidden" name="cerrar_sesion">
 </div>
 
 <!-- Bootstrap JavaScript Libraries -->
