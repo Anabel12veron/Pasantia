@@ -1,14 +1,8 @@
 <?php
 session_start();
-// include("./base_de_datos/sql_conection.php");
+
 include "./utils/funciones.php";
 
-// $iduser = $_SESSION['nombredelusuario'];
-
-// $sql = " SELECT ID_Registro_Usuario, Nombre_Usuario FROM registro_usuario WHERE 
-//     ID_Registro_Usuario='$iduser'";
-// $resultado = $mysqli-> query($sql);
-// $row = $resultado->fetch_assoc();
 ?>
     <!-- // Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
 
