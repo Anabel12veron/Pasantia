@@ -57,7 +57,7 @@
         echo '
         <script>
             alert ("Intentalo de nuevo, usuario no almacenado");
-            window.location = "./index.php";
+            window.location = "../pantallas/registro_usuario.php";
         </script>
         ';
     }

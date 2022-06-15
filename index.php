@@ -1,7 +1,14 @@
 <?php
 session_start();
+// include("./base_de_datos/sql_conection.php");
 include "./utils/funciones.php";
 
+// $iduser = $_SESSION['nombredelusuario'];
+
+// $sql = " SELECT ID_Registro_Usuario, Nombre_Usuario FROM registro_usuario WHERE 
+//     ID_Registro_Usuario='$iduser'";
+// $resultado = $mysqli-> query($sql);
+// $row = $resultado->fetch_assoc();
 ?>
     <!-- // Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
 
@@ -15,7 +22,6 @@ include "./utils/funciones.php";
     <link rel="stylesheet" href="./assets/estiloInicio.css">
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="./bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- 
 </head>
 <body class="fondo">
 
@@ -43,7 +49,6 @@ include "./utils/funciones.php";
     <a class="btn btn-danger" href="./pantallas/cerrar_sesion.php"><strong> Cerrar Sesión </strong></a>
     <input type="hidden" name="cerrar_sesion">
 </div>
-
 <!-- Bootstrap JavaScript Libraries -->
     <script src="./popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="./bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
