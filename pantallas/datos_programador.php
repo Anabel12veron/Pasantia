@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos Registrados</title>
     <!-- Bootstrap CSS v5.0.2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../jquery.dataTables.min.css">
     <link rel="stylesheet" href="../assets/estiloInicio.css">
@@ -15,58 +15,17 @@
 
 <body class="fondo">
     <h1 class="text-center"><strong> Datos Registrados </strong></h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
     <div class="m-3">
         <div class="table-responsive" style="background-color: white; padding: 15px">
             <?php
             session_start();
-            require("../base_de_datos/sql_conection.php");
-            include "../utils/funciones.php"; 
-            $sql = 'SELECT * FROM persona';
-            $result = $mysqli->query($sql) or die($mysqli->error);
+            include "../utils/funciones.php";
+            generarTablaPersona();
             ?>
 
 
-            <table class="table table-striped" id="TABLA_PERSONAS">
-                <thead>
-                    <tr>
-                        <th hidden>id</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Fecha Nac.</th>
-                        <th>DNI</th>
-                        <th>Sexo</th>
-                        <th>Eliminar</th>
-                        <th>Modificar</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <?php while ($programador = mysqli_fetch_assoc($result)) { ?>
-                        <tr id="<?php $programador['ID_Persona']; ?>">
-                            <td hidden><?php echo $programador["ID_Persona"]; ?></td>
-                            <td><?php echo $programador["Nombre"]; ?></td>
-                            <td><?php echo $programador["Apellido"]; ?></td>
-                            <td><?php echo date("d-m-Y", strtotime($programador['F_Nacimiento'])); ?></td>
-                            <td><?php echo $programador["DNI"]; ?></td>
-                            <td><?php echo $programador["Sexo"]; ?></td>
-                            <td>
-                                <a href="<?php echo "../base_de_datos/eliminarDatos.php?id=", $programador['ID_Persona']; ?>">
-                                    <button class="btn btn-danger"><strong> Eliminar </strong></button>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="<?php echo "../base_de_datos/modificarDatos.php?id=", $programador['ID_Persona']; ?>">
-                                    <button class="btn btn-primary"><strong> Modificar </strong></button>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-            </table>
-
+           
         </div>
     </div>
     <!-- Table JavaScript Libraries -->
@@ -75,8 +34,8 @@
     <!-- Bootstrap JavaScript Libraries -->
     <!-- Bootstrap JavaScript Libraries -->
     <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  
+    <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
     <script>
         $(document).ready(function() {
 
@@ -105,6 +64,12 @@
                     }
                 }
             });
+
+            // <?php if ($_SESSION['rol'] != 1) { ?>
+            //     var table = $('#TABLA_PERSONAS').DataTable();
+            //     table.column(6).visible(false); //Columna de Eliminar
+            //     table.column(7).visible(false); //Columna de Modificar
+            // <?php } ?>
 
         });
     </script>

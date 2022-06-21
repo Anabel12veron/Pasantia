@@ -33,6 +33,7 @@
          
             $_SESSION['nombredelusuario']=$nombre_Usuario;
             $_SESSION['registro_usuario'] = $usuarios_registros['Nombre_Usuario'];
+            $_SESSION['rol'] = $usuarios_registros['ID_Rol'];
             header("Location: ../index.php");
         }
     else
@@ -117,7 +118,7 @@
             <div class="m-3 row">
         <div class="text-center">
 
-        <button type="submit" class="btn btn-success" name="btnloginx">Guardar</button>
+        <button type="submit" class="btn btn-success" name="btnloginx">Ingresar</button>
           <!-- <button class="btn btn-success" role="button"><strong> Guardar </strong></button> -->
           <a name="" id="" class="btn btn-danger" href="" role="button"><strong> Cancelar </strong></a>
         </div>

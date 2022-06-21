@@ -11,7 +11,7 @@
 </head>
 
 <body class="fondo">
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
     
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php

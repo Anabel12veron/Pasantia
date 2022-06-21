@@ -17,7 +17,7 @@ include "../utils/funciones.php";
 <body class="fondo">
     <div>
     <h1 class="text-center"><strong> Información </strong></h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
+    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
     </div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

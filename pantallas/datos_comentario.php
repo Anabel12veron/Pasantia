@@ -13,7 +13,7 @@
 
 <body class="fondo">
     <h1 class="text-center"><strong>Comentarios</strong></h1>
-    <a name="" id="" class="btn btn-dark m-3" href="../pantallas/comentario.php" role="button"><strong> Volver </strong></a>
+    <a name="" id="" class="btn btn-dark m-3" href="../pantallas/comentario.php" role="button"><strong> 🡸 </strong></a>
     <div class="container">
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php

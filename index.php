@@ -29,7 +29,7 @@ include "./utils/funciones.php";
     </nav>
 
 <div class="">
-    <div class="d-grid gap-4 col-3 mx-auto">
+    <div class="d-grid gap-4 col-3 mx-auto m-3">
       <a class="btn btn-outline-primary" href="./pantallas/informacio.php"><strong> Información </strong></a>
       <a class="btn btn-outline-success" href="./pantallas/persona.php"><strong> Registrar </strong></a>
       <a class="btn btn-outline-danger" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>

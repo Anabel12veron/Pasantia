@@ -16,7 +16,7 @@
 
 <div class="container mb-5">
 <h1 class="text-center"><strong> Módulos </strong></h1>
-<a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> Volver al Inicio </strong></a>
+<a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
 <a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Módulo </strong></a>
         <div class= "table-responsive" style="background-color: white; padding: 10px">
             <?php

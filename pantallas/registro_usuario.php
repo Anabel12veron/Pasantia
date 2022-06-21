@@ -29,40 +29,31 @@
             <div class="form-group">
                 <input type="text" class="form-control" hidden name="action" id="action" value="insert">
                 <div class="form-group">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Nombre de Usuario" required="required">
-                        <div class="valid-feedback"> ¡Listo!</div>
-                        <div class="invalid-feedback"> Complete el campo. </div>
-                    </div>
+                    <select class="form-select" aria-label="Default select example"  name="ID_Rol" id="ID_Rol" >
+                        <option value="2">Invitado</option>
+                        <option value="1">Administrador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Nombre de Usuario" required="required">
+                </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
-                    <div class="valid-feedback"> ¡Listo!</div>
-                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="Apellido" placeholder="Apellido" required="required">
-                    <div class="valid-feedback"> ¡Listo!</div>
-                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="date" class="form-control" name="Fecha_Nac" id="Fecha de Nacimiento" placeholder="">
-                    <div class="valid-feedback"> ¡Listo!</div>
-                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="Celular" placeholder="Celular" required="required">
-                    <div class="valid-feedback"> ¡Listo!</div>
-                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" name="Correo" placeholder="Correo Electronico" required="required">
-                    <div class="valid-feedback"> ¡Listo!</div>
-                    <div class="invalid-feedback"> Complete el campo. </div>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
-                    <div class="valid-feedback"> ¡Listo!</div>
-                    <div class="invalid-feedback"> Complete el campo. </div>
+                    <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required"></div>
                 </div>
                 <div class="form-group">
                     <label class="form-check-label">

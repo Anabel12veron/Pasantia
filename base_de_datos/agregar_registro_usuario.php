@@ -2,6 +2,7 @@
     require("../base_de_datos/sql_conection.php");
     session_start();
     //print_r($_POST);
+    $rol = $_POST['ID_Rol'];
     $usuario = (isset($_POST["Nombre_Usuario"])) ? $_POST["Nombre_Usuario"] : '';
     $Nombre = $_POST['Nombre'];
     $Apellido = $_POST['Apellido'];
@@ -13,7 +14,7 @@
 
 
     // Agregar datos 
-    $insertar = "INSERT INTO registro_usuario (Nombre_Usuario, Nombre, Apellido, Celular, Correo, Fecha_Nac, Contrasena) VALUES ('$usuario', '$Nombre', '$Apellido', '$Celular', '$Correo', '$Fecha_Nac', '$Contrasena')";
+    $insertar = "INSERT INTO registro_usuario (ID_Rol, Nombre_Usuario, Nombre, Apellido, Celular, Correo, Fecha_Nac, Contrasena) VALUES ( '$rol', '$usuario', '$Nombre', '$Apellido', '$Celular', '$Correo', '$Fecha_Nac', '$Contrasena')";
 
     // verificar que el correo no se repita 
     $verificar_correo = mysqli_query($mysqli, "SELECT * FROM registro_usuario WHERE Correo='$Correo' ");
@@ -49,7 +50,7 @@
         echo '
         <script>
             alert ("Usuario almacenado exitosamente");
-            window.location = "./index.php";
+            window.location = "../index.php";
         </script>
         
         ';
