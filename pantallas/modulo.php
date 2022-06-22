@@ -12,12 +12,15 @@
 <body class="fondo">
   <?php 
     session_start();
+    // incluye las funciones generales
     include "../utils/funciones.php"; 
+    //conecta con la bases de datos
     require ("../base_de_datos/sql_conection.php");
+    //conecta con la base de datos modulo
     $sql= 'SELECT * FROM modulo';
     $result= $mysqli->query($sql) or die ($mysqli->error);
   ?>
- 
+ <!-- visualizacion en la pantalla -->
   <h1 class="text-center"><strong> Registro del Modulo </strong></h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
   <!--Formulatio y Dirección donde se hace el registro -->
@@ -48,10 +51,11 @@
         </div>
       </div>
       </fieldset>
+       <!-- funcion y boton al guardar o cancelar -->
       <div class="m-3 row">
         <div class="text-center">
           <button class="btn btn-success" role="button"><strong> Guardar </strong></button>
-          <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button"><strong> Cancelar </strong></a>
+            <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button"><strong> Cancelar </strong></a>
         </div>
       </div>
     </form>

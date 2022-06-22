@@ -15,15 +15,17 @@
 
 <body>
     <?php
-
+    //conecta con la bases de datos
     require("../base_de_datos/sql_conection.php");
+    //conecta con la base de datos de modulo
     $sql = 'SELECT * FROM registro_usuario';
     $result = $mysqli->query($sql) or die($mysqli->error);
     ?>
 
+    <!-- Lo que se visualiza en la pantalla -->
     <div class="signup-form">
-
         <form action="../base_de_datos/agregar_registro_usuario.php" method="POST" class="needs-validation" novalidate>
+            <!-- Titulo de la pantalla -->
             <h2>Registrar</h2>
             <p class="hint-text">Crea tu cuenta.</p>
             <div class="form-group">
@@ -62,12 +64,13 @@
                         <a href="#">Politica de Privacidad</a>
                     </label>
                 </div>
+                <!-- funcion y boton al guardar -->
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
                 </div>
-                </div>
-            </div>
         </form>
+    </div>
+        <!-- Le lleva al inicio de sesion -->
         <div class="text-center">¿Ya tienes una cuenta creada?
             <a href="../pantallas/iniciar_sesion.php">Iniciar Sesion</a>
         </div>

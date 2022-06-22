@@ -13,14 +13,19 @@
     <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 
+<!-- imprime el fonde de pantalla -->
 <body class="fondo">
+      <!-- titulo del inicio -->
     <h1 class="text-center"><strong> Datos Registrados </strong></h1>
+      <!-- botón con la función de regresar a la pantalla de inicio -->
     <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
     <div class="m-3">
         <div class="table-responsive" style="background-color: white; padding: 15px">
             <?php
             session_start();
+            // incluye las funciones generales
             include "../utils/funciones.php";
+            // imprime a la tabla con sus datos 
             generarTablaPersona();
             ?>
 
@@ -39,9 +44,10 @@
     <script>
         $(document).ready(function() {
 
-
+// la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_PERSONAS").DataTable({
                 language: {
+                    //son las caracteristicas del buscador
                     processing: "Traitement en cours...",
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ registros",
@@ -64,13 +70,6 @@
                     }
                 }
             });
-
-            // <?php if ($_SESSION['rol'] != 1) { ?>
-            //     var table = $('#TABLA_PERSONAS').DataTable();
-            //     table.column(6).visible(false); //Columna de Eliminar
-            //     table.column(7).visible(false); //Columna de Modificar
-            // <?php } ?>
-
         });
     </script>
 </body>

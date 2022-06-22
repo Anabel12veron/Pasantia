@@ -12,12 +12,15 @@
 <body class="fondo">
 <?php 
   session_start();
+  //conecta con la bases de datos 
   require ("../base_de_datos/sql_conection.php");
+  // incluye las funciones generales
   include "../utils/funciones.php"; 
+  //conecta con la base de datos de persona
   $sql= 'SELECT * FROM persona';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>
- 
+  <!-- se visualiza en la pantalla -->
   <h1 class="text-center"><strong> Registro de Datos </strong></h1>
   <div class="container" style="background-color: #ffffff; padding: 25px;">
   <!--Formulatio y Dirección donde se hace el registro -->
@@ -27,32 +30,24 @@
         <label for="Nombre" class="col-sm-1-12 col-form-label"><strong> Nombre </strong></label>
         <div class="col-sm-6">
           <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su Nombre completo">
-          <div class="valid-feedback"> ¡Listo!</div>
-          <div class="invalid-feedback"> Complete el campo. </div>
         </div>
       </div>
       <div class="mb-3 row">
         <label for="Apellido" class="col-sm-1-12 col-form-label"><strong> Apellido </strong></label>
         <div class="col-sm-6">
           <input type="text" class="form-control" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
-          <div class="valid-feedback"> ¡Listo!</div>
-          <div class="invalid-feedback"> Complete el campo. </div>
         </div>
       </div>
       <div class="mb-3 row">
         <label for="F_Nacimiento" class="col-sm-1-12 col-form-label"><strong> Fecha de Nacimiento </strong></label>
         <div class="col-sm-6">
           <input type="date" class="form-control" name="F_Nacimiento" id="F_Nacimiento" placeholder="">
-          <div class="valid-feedback"> ¡Listo!</div>
-          <div class="invalid-feedback"> Complete el campo. </div>
         </div>
       </div>
       <div class="mb-3 row">
         <label for="DNI" class="col-sm-1-12 col-form-label"><strong> DNI </strong></label>
         <div class="col-sm-6">
           <input type="number" class="form-control" name="DNI" id="DNI" placeholder="Ingrese su numero de documento">
-          <div class="valid-feedback"> ¡Listo!</div>
-          <div class="invalid-feedback"> Complete el campo. </div>
         </div>
       </div>
       <div class="mb-3 row">
@@ -65,6 +60,7 @@
       </div>
       </div>
       </fieldset>
+      <!-- funcion y boton al guardar o cancelar -->
       <div class="m-3 row">
         <div class="text-center">
           <button class="btn btn-success" role="button"><strong> Guardar </strong></button>
@@ -73,8 +69,6 @@
       </div>
     </form>
   </div>
-
-
 
 
 <!-- Bootstrap JavaScript Libraries -->

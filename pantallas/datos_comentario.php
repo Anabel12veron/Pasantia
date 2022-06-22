@@ -12,14 +12,19 @@
 </head>
 
 <body class="fondo">
+    <!-- titulo del inicio -->
     <h1 class="text-center"><strong>Comentarios</strong></h1>
+    <!-- botón con la función de regresar a la pantalla de inicio -->
     <a name="" id="" class="btn btn-dark m-3" href="../pantallas/comentario.php" role="button"><strong> 🡸 </strong></a>
+    <!-- centra todo el contenido -->
     <div class="container">
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
             session_start();
+                // conexion a la base de datos
             include_once '../base_de_datos/sql_conection.php';
             include "../utils/funciones.php"; 
+            // conexion para la solicitación de los datos que se van a imprimir en pantalla que están cargados en la bd.
             $sql_sel = "SELECT * FROM comentario ORDER BY ID_Comentario DESC";
             $result = $mysqli->query($sql_sel) or die($mysqli->error);
             $count = $result->num_rows;
@@ -35,9 +40,11 @@
             <?php } ?>
             <div id="response">
                 <?php
+                // el bucle de los datos.
                 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
                 ?>
+                <!-- estructura de los datos almacenados en pantalla -->
                     <div id="comment-<?php echo $row["ID_Comentario"]; ?>" class="comment-row">
                         <div class="comment-user, btn btn-secondary"><?php echo $row["Nombre_Usuario"]; ?></div>
                         <div class="comment-msg, text-primary, alert alert-secondary" id="msgdiv-<?php echo $row["ID_Comentario"]; ?>"><?php echo $row["Comentario"]; ?></div>

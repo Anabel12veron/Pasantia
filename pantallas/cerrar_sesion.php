@@ -1,6 +1,5 @@
 <?php
 // Inicializar la sesión.
-// Si está usando session_name("algo"), ¡no lo olvide ahora!
 session_start();
 
 // Destruir todas las variables de sesión.
@@ -18,6 +17,6 @@ if (ini_get("session.use_cookies")) {
 
 // Finalmente, destruir la sesión.
 session_destroy();
+//te lleva para volver a iniciar sesion
 header('location: ./iniciar_sesion.php')
-
 ?>

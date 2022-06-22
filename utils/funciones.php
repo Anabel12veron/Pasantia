@@ -1,14 +1,15 @@
 <?php
-
-
+        //Esta funcion hace que si no inicias sesion no te permite estar en el index
 verificar_sesion();
-
+/**
+ * Esta functión genera la verificacion de inicio sesion. 
+ * Retorna un HTML de la tabla
+ */
 function verificar_sesion()
 {
     if (!isset($_SESSION['registro_usuario'])) {
 
         //Si la dirección del php al INDEX entonces, pido iniciar sesión. 
-        // [ ESTOY USANDO UN SOLO PUNTO EN EL WINDOW.LOCATION ]
         if (basename($_SERVER['PHP_SELF'], ".php") == 'index') {
             echo '
             <script>
@@ -18,7 +19,6 @@ function verificar_sesion()
          ';
         } else {
             // Sino también voy al iniciar sesión, pero estoy en otra pantalla.
-            // [ ESTOY USANDO DOS PUNTOS EN EL WINDOW.LOCATION ]
             echo '
             <script>
                 alert ("POR FAVOR DEBES INICIAR SESIÓN");
@@ -27,7 +27,6 @@ function verificar_sesion()
          ';
         }
 
-
         session_destroy();
         die();
     }
@@ -35,6 +34,10 @@ function verificar_sesion()
 
 
     //COMIENZO DE LA TABLA PERSONA
+/**
+* Esta functión genera la tabla de persona. 
+* Retorna un HTML de la tabla
+*/
 function generarTablaPersona()
 {
     //Incluye la conexión a la base de datos
@@ -129,6 +132,10 @@ function generarTablaPersona()
 
 
 //COMIENZO DE LA PANTALLA MODULO
+/**
+ * Esta functión genera la tabla de modulos. 
+ * Retorna un HTML de la tabla
+ */
 function generarTablaModulo()
 {
 //Incluye la conexión a la base de datos
@@ -242,7 +249,6 @@ function generarTablaProyecto()
 
         $headersAdmin = "
         <th>Eliminar</th>
-        <th>Modificar</th>
         ";
     }
         //Creamos una variable que contenga los encabezados de la tabla 

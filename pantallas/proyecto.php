@@ -13,15 +13,16 @@
   <script src="../jquery-3.5.1.js"></script>
   <script src="../jquery.dataTables.min.js"></script>
 
-
-
 </head>
 
 <body class="fondo">
   <?php
   session_start();
+  // incluye las funciones generales
   include "../utils/funciones.php"; 
+  //conecta con la bases de datos 
   require("../base_de_datos/sql_conection.php");
+  //conecta con la base de datos de proyecto
   $sql = 'SELECT * FROM proyecto';
   $result = $mysqli->query($sql) or die($mysqli->error);
   ?>
@@ -37,12 +38,12 @@
         </div>
         <div class="modal-body">
           <?php
-          require("../base_de_datos/sql_conection.php");
-          $sql = 'SELECT * FROM persona';
-          $result = $mysqli->query($sql) or die($mysqli->error);
+            require("../base_de_datos/sql_conection.php");
+            $sql = 'SELECT * FROM persona';
+            $result = $mysqli->query($sql) or die($mysqli->error);
           ?>
 
-
+<!-- Hace visualizar el contenido a la tabla en la pantalla -->
           <table class="table table-striped" id="TABLA_PERSONAS">
             <thead>
               <tr>
@@ -71,11 +72,12 @@
             </tbody>
           </table>
         </div>
+      <!-- funcion y boton al guardar -->
         <div class="modal-footer">
-        <a class="btn btn-success" href="../pantallas/persona.php" role="button"><strong> Guardar </strong></a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar_modal_personas">
-            Cerrar
-          </button>
+          <a class="btn btn-success" href="../pantallas/persona.php" role="button"><strong> Guardar </strong></a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar_modal_personas">
+              Cerrar
+            </button>
         </div>
       </div>
     </div>
@@ -92,10 +94,13 @@
         </div>
         <div class="modal-body">
         <?php
-            require("../base_de_datos/sql_conection.php");
-            $sql = 'SELECT * FROM modulo';
-            $result = $mysqli->query($sql) or die($mysqli->error);
-            ?>
+          //conecta con la bases de datos 
+          require("../base_de_datos/sql_conection.php");
+          //conecta con la base de datos de modulo
+          $sql = 'SELECT * FROM modulo';
+          $result = $mysqli->query($sql) or die($mysqli->error);
+        ?>
+        <!-- Hace visualizar el contenidoa  la tabla en la pantalla -->
             <table class="table table-striped" id="TABLA_MODULO">
                 <thead>
                     <tr>
@@ -121,6 +126,7 @@
                 </tbody>
             </table>
         </div>
+          <!-- funcion y boton de cerrar -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar_modal_modulos">
             Cerrar
@@ -130,7 +136,8 @@
     </div>
   </div>
   <!-- Fin de Modal Modulos -->
-  
+
+  <!-- Lo que se visualiza en la pantalla -->
   <h1 class="text-center"><strong> Registro del Proyecto </strong></h1>
   <div class="container" style="background-color: #ffffff; padding: 25px">
     <!--Formulatio y Dirección donde se hace el registro -->
@@ -149,24 +156,25 @@
 
 
     <form action="../base_de_datos/agregarProyecto.php" method="POST">
+      <!-- Los ID ocultos -->
       <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <input type="text" class="form-control" name="ID_Modulo" id="ID_Modulo" hidden>
       <input type="text" class="form-control" name="ID_Persona" id="ID_Persona" hidden>
   </div>
-  </fieldset>
+  <!-- funcion y boton al guardar y cancelar-->
   <div class="m-3 row">
     <div class="text-center">
       <button class="btn btn-success" role="button"><strong> Guardar </strong></button>
       <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button"><strong> Cancelar </strong></a>
     </div>
   </div>
-  </form>
-  </div>
 
   <script>
     $(document).ready(function(){
+    // la funcion que cumple es el de poder buscar los datos mas rapidos 
       $("#TABLA_PERSONAS").DataTable({
                 language: {
+                    //son las caracteristicas del buscador
                     processing: "Traitement en cours...",
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ registros",
@@ -192,8 +200,10 @@
 
         });
 
+// la funcion que cumple es el de poder buscar los datos mas rapidos 
       $("#TABLA_MODULO").DataTable({
                 language: {
+                    //son las caracteristicas del buscador
                     processing: "Traitement en cours...",
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ registros",

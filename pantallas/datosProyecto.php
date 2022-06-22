@@ -17,13 +17,18 @@
 <body class="fondo">
 
     <div class="container mb-5">
+        <!-- titulo de inicio de la tabla -->
         <h1 class="text-center"><strong> Módulos </strong></h1>
+        <!-- botón con la función de regresar a la pantalla de inicio -->
         <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
+        <!-- botón que cumple la función de agregar un nuevo Módulo -->
         <a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Módulo </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
             session_start();
+            // incluye las funciones generales
             include "../utils/funciones.php";
+            // imprime la tabla modilo con sus datos
             generarTablaModulo()
             ?>
 
@@ -32,14 +37,16 @@
     </div>
 
     <div>
+        <!-- titulo de inicio de la tabla -->
         <h1 class="text-center"> <strong> Proyectos </strong></h1>
     </div>
 
     <div class="container mb-5">
+        <!-- botón que cumple la función de agregar un nuevo proyecto  -->
         <a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button"><strong> Agregar Proyecto </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
-
+// imprime la tabla proyecto con sus datos
             generarTablaProyecto()
             
             ?>
@@ -62,9 +69,10 @@
             var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl)
             })
-
+// la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_PROYECTO").DataTable({
                 language: {
+                    //son las caracteristicas del buscador
                     processing: "Traitement en cours...",
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ registros",
@@ -92,9 +100,10 @@
     </script>
     <script>
         $(document).ready(function() {
-
+// la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_MODULO").DataTable({
                 language: {
+                    //son las caracteristicas del buscador
                     processing: "Traitement en cours...",
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ registros",

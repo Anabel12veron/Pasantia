@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
-    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap.min.css"> 
     <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 
 <body class="fondo">
+  <!-- botón con la función de regresar a la pantalla de inicio -->
     <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
-    
+    <!-- centra todo el contenido -->
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
     session_start();
+    // conexion a la base de datos
     require("../base_de_datos/sql_conection.php");
     include "../utils/funciones.php"; 
     $sql = 'SELECT * FROM comentario';
@@ -54,7 +56,6 @@
 <!-- Bootstrap JavaScript Libraries -->
   <script src="../jquery/3.3.1/jquery.min.js"></script>
   <script src="../bootstrap.bundle.min.js"></script>
- 
 	<script src="../assets/script.js"></script>
 	</div>
 	</div>

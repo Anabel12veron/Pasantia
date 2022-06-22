@@ -14,23 +14,23 @@
 </header>
 <body>
 <?php 
+    // la funcion cumple que tiene inicio de sesion
     session_start();
+    //conecta con la bases de datos 
     require("../base_de_datos/sql_conection.php");
     $nombre_Usuario = (isset($_POST["Nombre_Usuario"]))? $_POST["Nombre_Usuario"] : '' ;
     $pass = (isset($_POST["Contrasena"]))? $_POST["Contrasena"] : '' ;
-    //echo $nombre ;exit;
 
     //Para iniciar sesión
     if(isset($_POST["btnloginx"]))
     {
-    
+    //Conexion con la base de datos con el modulo registro_usuario
     $queryusuario = mysqli_query($mysqli,"SELECT * FROM registro_usuario WHERE Nombre_Usuario = '$nombre_Usuario'");
     $nr = mysqli_num_rows($queryusuario); 
     $usuarios_registros = mysqli_fetch_array($queryusuario); 
-        
+        //funcion para validar la contraseña o usuario
     if (($nr == 1) && (password_verify($pass,$usuarios_registros['Contrasena'])) )
-        { 
-         
+        {
             $_SESSION['nombredelusuario']=$nombre_Usuario;
             $_SESSION['registro_usuario'] = $usuarios_registros['Nombre_Usuario'];
             $_SESSION['rol'] = $usuarios_registros['ID_Rol'];
@@ -45,7 +45,7 @@
     //Para registrar
     if(isset($_POST["btnregistrarx"]))
     {
-    
+    //Conexion con la base de datos con el modulo registro_usuario
     $queryusuario = mysqli_query($mysqli,"SELECT * FROM login WHERE Nombre_Usuario = '$nombre_Usuario'");
     $nr = mysqli_num_rows($queryusuario); 
     
@@ -70,7 +70,6 @@
             echo "<script> alert('No puedes registrar a este usuario: $nombre_Usuario');</script>";
     }
     
-
     /*VaidrollTeam*/
    
      
@@ -95,11 +94,13 @@
 
 
 
-
+<!-- visualizacion en la pantalla -->
     <div class="signup-form">
         <form action=""  method="POST" >
+            <!-- Titulo de inicio sesion -->
             <h2>Iniciar Sesion</h2>
             <p class="hint-text">Ingresa los requisitos.</p>
+            <!-- Contenido de la pantalla Inicio Sesion -->
             <div class="form-group">
                 <input type="text" class="form-control" hidden name="action" id="action" value="insert">
                 <div class="row">
@@ -114,14 +115,12 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
             </div>
-
-            <div class="m-3 row">
-        <div class="text-center">
-
-        <button type="submit" class="btn btn-success" name="btnloginx">Ingresar</button>
-          <!-- <button class="btn btn-success" role="button"><strong> Guardar </strong></button> -->
-          <a name="" id="" class="btn btn-danger" href="" role="button"><strong> Cancelar </strong></a>
-        </div>
+      <!-- funcion y boton al guardar o cancelar -->
+        <div class="m-3 row">
+            <div class="text-center">
+                <button type="submit" class="btn btn-success" name="btnloginx">Ingresar</button>
+                    <a name="" id="" class="btn btn-danger" href="" role="button"><strong> Cancelar </strong></a>
+            </div>
       </div>
         </form>
     </div>
