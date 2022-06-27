@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-//Se autoinicia una sesión
+    
     session_start();
 //conexion con la base de datos
     require "../base_de_datos/sql_conection.php";

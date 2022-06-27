@@ -1,5 +1,5 @@
-<!-- Hace la conexion con la base de datos -->
 <?php
+//  Hace la conexion con la base de datos     
     $servidor = 'localhost';
     $usuario = 'root';
     $password = '';

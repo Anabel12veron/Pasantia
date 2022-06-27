@@ -75,13 +75,13 @@ function generarTablaPersona()
     $result = $mysqli->query($sql) or die($mysqli->error);
 
     while ($programador = mysqli_fetch_assoc($result)) {
-
+        //print_r($programador);
     //Verificamos si es Admin para agregarle los botones de Eliminar y Modificar
         if ($_SESSION['rol'] == 1) {
             $botonesAdmin = "
 
                 <td>
-                    <a href='../base_de_datos/eliminarDatos.php?id='" . $programador['ID_Persona'] . "'>
+                    <a href='../base_de_datos/eliminarDatos.php?id=" . $programador['ID_Persona'] . "'>
                         <button class='btn btn-danger'><strong> Eliminar </strong></button>
                     </a>
                 </td>
@@ -110,7 +110,7 @@ function generarTablaPersona()
     }
     //Juntamos todo lo anterior para generar la tabla.
     $strTabla = "
-        <table class='table table-striped' id='$id_tabla'>
+        <table class='table  table-hover order-column' id='$id_tabla'>
         <thead>
             <tr>
                 $headers
@@ -241,7 +241,7 @@ function generarTablaProyecto()
     $headersAdmin = "";
     $botonesAdmin = "";
     $trData = "";
-    $id_tabla = "TABLA_MODULO";
+    $id_tabla = "TABLA_PROYECTO";
     $MODULO_DESCRI= "";
 
         //Verifico si es Admin para poner las opciones de Eliminar y Modificar

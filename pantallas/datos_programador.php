@@ -45,14 +45,15 @@
 
 // la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_PERSONAS").DataTable({
+                "lengthMenu": [ 5,10, 25, 50, 75, 100 ],
                 language: {
                     //son las caracteristicas del buscador
                     processing: "Traitement en cours...",
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ registros",
                     info: "Mostrando _START_ a _END_ del total de _TOTAL_ registros",
-                    infoEmpty: "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
-                    infoFiltered: "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+                    infoEmpty: "Mostrando 0 elementos del total de _TOTAL_ registros",
+                    infoFiltered: "(Filtrado de _MAX_ elementos en total)",
                     infoPostFix: "",
                     loadingRecords: "Cargando registros",
                     zeroRecords: "No se encuentran registros",

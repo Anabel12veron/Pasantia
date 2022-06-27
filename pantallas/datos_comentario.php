@@ -71,16 +71,15 @@
     <script>
         function msg_alert(msg='',type='danger'){
             //Si no, nos agrega un cartel de error.
-            $(".container").before('<div id="msg-alert" class="alert alert-'+type+' d-flex align-items-center" role="alert"><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="'+type+'"></svg><div>'+msg+'</div></div>')
+            $(".container").before('<div id="msg-alert" class="alert alert-'+type+' d-flex align-items-center" role="alert" style="border: 3px solid white"><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="'+type+'"></svg><div>'+msg+'</div></div>')
             //Y elimina el cartel luego de 5 seg.
             setTimeout(function(){
                 $("#msg-alert").remove();
             },5000)
         }
+
+
         function deletecomment(id) {
-
-
-  
 
             if (confirm("¿Estás seguro de que quieres borrar este comentario?")) {
             
@@ -94,8 +93,8 @@
                         //Si todo sale bien el servidor responde.
                        
                         //Si la respues es satifactoria.
-                        if (data.respuesta == "succes") {
-                            msg_alert("alerta de eliminanción", 'succes');
+                        if (data.respuesta == "success") {
+                            msg_alert("Se eliminó correctamente", 'success');
                             //Se elimina el comentario de la pantalla.
                             //Para no tener que recargar toda la página.
                             $("#comment-" + id).remove();

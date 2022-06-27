@@ -16,7 +16,7 @@ if($resultado === FALSE){
     $return_arr = array("respuesta"=>"error", "msg"=>"Hubo un error al eliminar");
 }else{
     //Si se elimina respondemos con un mensaje satisfactorio.
-    $return_arr = array("respuesta"=>"succes", "msg"=>"Se elimino correctamente");
+    $return_arr = array("respuesta"=>"success", "msg"=>"Se elimino correctamente");
 }
 
 //Enviamos respuesta.-
