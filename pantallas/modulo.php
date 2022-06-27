@@ -11,12 +11,13 @@
 </head>
 <body class="fondo">
   <?php 
+    //Se autoinicia una sesión
     session_start();
     // incluye las funciones generales
     include "../utils/funciones.php"; 
     //conecta con la bases de datos
     require ("../base_de_datos/sql_conection.php");
-    //conecta con la base de datos modulo
+  //Selecciona la base de datos de Modulo
     $sql= 'SELECT * FROM modulo';
     $result= $mysqli->query($sql) or die ($mysqli->error);
   ?>
@@ -50,7 +51,7 @@
           <input type="text" class="form-control" name="Estado" id="Estado" placeholder="Ingrese el estado">
         </div>
       </div>
-      </fieldset>
+
        <!-- funcion y boton al guardar o cancelar -->
       <div class="m-3 row">
         <div class="text-center">

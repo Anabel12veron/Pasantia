@@ -15,19 +15,23 @@
 Se ha Agregado un Proyecto ✔
 </div>
 </div>
-<?php
 
+<?php
+//Se autoinicia una sesión
 session_start();
+//conexion con la base de datos
 require ("../base_de_datos/sql_conection.php");
 
 //print_r($_POST);
     $ID_Modulo = $_POST['ID_Modulo'];
     $ID_Persona = $_POST['ID_Persona'];
 
-$agregar = "INSERT INTO proyecto (ID_Modulo, ID_Persona) VALUES ('$ID_Modulo', '$ID_Persona')";
-$resultado = $mysqli->query($agregar) or die ($mysqli->error);
+//Inserta los datos 
+    $agregar = "INSERT INTO proyecto (ID_Modulo, ID_Persona) VALUES ('$ID_Modulo', '$ID_Persona')";
+    $resultado = $mysqli->query($agregar) or die ($mysqli->error);
 ?>
 
+<!-- Boton para ir a la paguina de nuevo -->
 <a href="../pantallas/datosProyecto.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 
 <!-- Bootstrap JavaScript Libraries -->

@@ -15,9 +15,13 @@
 Se ha Agregado un Modulo ✔
 </div>
 </div>
+
 <?php
-session_start();
-require ("../base_de_datos/sql_conection.php");
+//conexion con la base de datos
+    require ("../base_de_datos/sql_conection.php");
+//Se autoinicia una sesión
+    session_start();
+
 
 //print_r($_POST);
     $Nombre_Modulo = $_POST['Nombre_Modulo'];
@@ -25,10 +29,12 @@ require ("../base_de_datos/sql_conection.php");
     $Sistema = $_POST['Sistema'];
     $Estado = $_POST['Estado'];
 
-$agregar = "INSERT INTO modulo (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre_Modulo', '$Descripcion', '$Sistema', '$Estado')";
-$resultado = $mysqli->query($agregar) or die ($mysqli->error);
+//Inserta los datos 
+    $agregar = "INSERT INTO modulo (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre_Modulo', '$Descripcion', '$Sistema', '$Estado')";
+    $resultado = $mysqli->query($agregar) or die ($mysqli->error);
 ?>
 
+<!-- Boton para ir a la paguina de nuevo -->
 <a href="../pantallas/datosProyecto.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 
 <!-- Bootstrap JavaScript Libraries -->

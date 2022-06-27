@@ -1,4 +1,5 @@
 <?php
+//Se autoinicia una sesión
 session_start();
 // incluye las funciones generales
 include "../utils/funciones.php"; 

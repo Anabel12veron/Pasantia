@@ -16,10 +16,13 @@
     <!-- centra todo el contenido -->
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
+    //Se autoinicia una sesión
     session_start();
     // conexion a la base de datos
     require("../base_de_datos/sql_conection.php");
+    //Llama a las funciones del modulo Funciones
     include "../utils/funciones.php"; 
+    //Seleciona los datos de Comentario
     $sql = 'SELECT * FROM comentario';
     $result = $mysqli->query($sql) or die($mysqli->error);
 ?>

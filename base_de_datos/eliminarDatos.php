@@ -9,13 +9,16 @@
 </head>
 <body>
     <?php
+//Se autoinicia una sesión
     session_start();
+//conexion con la base de datos
     require "../base_de_datos/sql_conection.php";
+//selecciona y pregunta 
 	$id_persona=$_GET["id"];
     $eliminar_sql = "SELECT * FROM proyecto WHERE ID_Persona = $id_persona";
     $resultado=$mysqli->query($eliminar_sql);
 
-    // Si el módulo está relacionado a un proyecto no se le deja eliminar.
+// Si el módulo está relacionado a un proyecto no se le deja eliminar.
     if ($resultado->{"num_rows"} > 0) {
     ?>
         <div class="alert alert-danger d-flex align-items-center " role="alert">
@@ -28,7 +31,7 @@
     } else {
         $eliminar = "DELETE FROM persona WHERE ID_Persona = $id_persona";
         $resultado=$mysqli->query($eliminar);
-    // Si no está relacionado, se puede eliminar el registro.
+// Si no está relacionado, se puede eliminar el registro.
     ?>
         <div class="alert alert-success d-flex align-items-center" role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="success:"></svg>
@@ -39,7 +42,7 @@
     <?php
     }
     ?>
-
+<!-- Boton para ir a la paguina de nuevo  -->
     <a href="../pantallas/datos_programador.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 
 <!-- Bootstrap JavaScript Libraries -->

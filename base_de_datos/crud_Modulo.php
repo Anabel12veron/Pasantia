@@ -1,5 +1,7 @@
 <?php 
+//Se autoinicia una sesión
 session_start();
+//conexion con la base de datos
 require("../base_de_datos/sql_conection.php");
 
 
@@ -22,12 +24,12 @@ if ($_POST['action'] != 'insert'){
 if (isset($_POST['action'])) {
 
     if ($ID_Modulo == "") {
-        // insert
+        // insert (Inserta los datos de Modulo)
         $agregar = "INSERT INTO modulo (Nombre_Modulo, Descripcion, Sistema, Estado) VALUES ('$Nombre', '$Descripcion','$Sistema', '$Estado')";
         $resultado = $mysqli->query($agregar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se agrego con éxito';
     } else {
-        // update
+        // update (Modifica los datos de Modulo)
         $actualizar = "UPDATE modulo SET
                                 Nombre_Modulo = '$Nombre', 
                                 Descripcion = '$Descripcion', 
@@ -39,7 +41,7 @@ if (isset($_POST['action'])) {
         $mensaje_de_exito = 'Se modificó con exito';
     }
 } else {
-    // delete
+    // delete (Elimina los datos de Modulo)
     
     $eliminar= "DELETE FROM modulo Where ID_Modulo = $ID_Modulo";
     $resultado=$mysqli->query($eliminar);
@@ -69,6 +71,7 @@ if (isset($_POST['action'])) {
     </div>
     </div>
 
+<!-- Boton para ir a la paguina de nuevo -->
     <a href="../pantallas/datosProyecto.php"><button class="btn btn-success">Ir a la Lista</button></a>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

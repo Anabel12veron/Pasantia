@@ -17,7 +17,7 @@
     <?php
     //conecta con la bases de datos
     require("../base_de_datos/sql_conection.php");
-    //conecta con la base de datos de modulo
+    //Seleccion la base de datos de Registro de Usuario
     $sql = 'SELECT * FROM registro_usuario';
     $result = $mysqli->query($sql) or die($mysqli->error);
     ?>
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <select class="form-select" aria-label="Default select example"  name="ID_Rol" id="ID_Rol" >
                         <option value="2">Invitado</option>
-                        <option value="1">Administrador</option>
+                        <option value="1" hidden>Administrador</option>
                     </select>
                 </div>
                 <div class="form-group">

@@ -20,9 +20,11 @@
     <div class="container">
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
+            //Se autoinicia una sesión
             session_start();
-                // conexion a la base de datos
+            // conexion a la base de datos
             include_once '../base_de_datos/sql_conection.php';
+            //Llama a las funciones del modulo Funciones
             include "../utils/funciones.php"; 
             // conexion para la solicitación de los datos que se van a imprimir en pantalla que están cargados en la bd.
             $sql_sel = "SELECT * FROM comentario ORDER BY ID_Comentario DESC";
@@ -31,7 +33,7 @@
 
             if ($count > 0) {
             ?>
-                <!-- PHP  es la de recuperar los comentarios que hay almacenados en la base de datos cuando se accede a la página-->
+            <!-- PHP  es la de recuperar los comentarios que hay almacenados en la base de datos cuando se accede a la página-->
                 <div id="comment-count">
                     <span id="count-number"><?php echo $count; ?></span> Comentario(s)
                 </div>
@@ -40,11 +42,11 @@
             <?php } ?>
             <div id="response">
                 <?php
-                // el bucle de los datos.
+            // el bucle de los datos.
                 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
                 ?>
-                <!-- estructura de los datos almacenados en pantalla -->
+            <!-- estructura de los datos almacenados en pantalla -->
                     <div id="comment-<?php echo $row["ID_Comentario"]; ?>" class="comment-row">
                         <div class="comment-user, btn btn-secondary"><?php echo $row["Nombre_Usuario"]; ?></div>
                         <div class="comment-msg, text-primary, alert alert-secondary" id="msgdiv-<?php echo $row["ID_Comentario"]; ?>"><?php echo $row["Comentario"]; ?></div>

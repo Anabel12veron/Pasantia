@@ -8,7 +8,7 @@
     <title>Eliminar</title>
 </head>
 <body>
-
+<!-- Alerta para decir que se elimino -->
     <div class="alert alert-danger d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"></svg>
     <div>
@@ -16,16 +16,20 @@
     </div>
     </div>
     <?php
+//Se autoinicia una sesión
     session_start();
+//conexion con la base de datos
     require "../base_de_datos/sql_conection.php";
 
 	$programador=$_GET["id"];
-
+//Elimina
     $eliminar= "DELETE FROM proyecto Where ID_Proyecto = $programador";
 
     $resultado=$mysqli->query($eliminar);
 
     ?>
+
+<!-- Boton para ir a la paguina de nuevo -->
     <a href="../pantallas/datosProyecto.php"><button class="btn btn-success">Ir a la Lista</button></a>
 
 <!-- Bootstrap JavaScript Libraries -->

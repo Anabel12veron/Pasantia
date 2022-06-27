@@ -17,12 +17,13 @@
 
 <body class="fondo">
   <?php
+  //Se autoinicia una sesión 
   session_start();
   // incluye las funciones generales
   include "../utils/funciones.php"; 
   //conecta con la bases de datos 
   require("../base_de_datos/sql_conection.php");
-  //conecta con la base de datos de proyecto
+  //Selecciona la base de datos de Proyecto
   $sql = 'SELECT * FROM proyecto';
   $result = $mysqli->query($sql) or die($mysqli->error);
   ?>

@@ -1,5 +1,7 @@
 <?php
+//Se autoinicia una sesión
 session_start();
+//conexion con la base de datos
 require("../base_de_datos/sql_conection.php");
 
 
@@ -9,10 +11,6 @@ $Apellido = (isset($_POST['Apellido']))? $_POST['Apellido'] : "";
 $F_Nacimiento = (isset($_POST['F_Nacimiento']))? $_POST['F_Nacimiento'] : "";
 $DNI = (isset($_POST['DNI']))? $_POST['DNI'] : "";
 $Sexo = (isset($_POST['Sexo']))? $_POST['Sexo'] : "";
-
-
-
-
 
 
 
@@ -26,16 +24,15 @@ if ($_POST['action'] != 'insert'){
 // Validaciones
 
 
-
 if (isset($_POST['action'])) {
 
     if ($ID_Persona == "") {
-        // insert
+        // insert (Insertar los datos de Persona)
         $agregar = "INSERT INTO persona (Nombre, Apellido, F_Nacimiento, DNI, Sexo) VALUES ('$Nombre', '$Apellido', '$F_Nacimiento', $DNI, '$Sexo')";
         $resultado = $mysqli->query($agregar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se agrego con éxito';
     } else {
-        // update
+        // update (Modifica  los datos de Persona)
         $actualizar = "UPDATE persona SET
                        Nombre = '$Nombre', Apellido = '$Apellido', F_Nacimiento = '$F_Nacimiento', DNI = '$DNI', Sexo = '$Sexo'
                        WHERE ID_Persona =  $ID_Persona";
@@ -43,7 +40,7 @@ if (isset($_POST['action'])) {
         $mensaje_de_exito = 'Se modificó con exito';
     }
 } else {
-    // delete
+    // delete (Elimina los datos de la Persona)
     
     $eliminar= "DELETE FROM persona Where ID_Persona = $ID_Persona";
     $resultado=$mysqli->query($eliminar);
@@ -71,6 +68,7 @@ if (isset($_POST['action'])) {
     </div>
     </div>
 
+<!-- Boton para ir a la paguina de nuevo -->
     <a href="../pantallas/datos_programador.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

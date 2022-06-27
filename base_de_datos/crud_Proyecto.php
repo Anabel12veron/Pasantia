@@ -1,5 +1,7 @@
 <?php 
+//Se autoinicia una sesión
 session_start();
+//conexion con la base de datos
 require("../base_de_datos/sql_conection.php");
 
 
@@ -20,12 +22,12 @@ if ($_POST['action'] != 'insert'){
 if (isset($_POST['action'])) {
 
     if ($ID_Proyecto == "") {
-        // insert
+        // insert (Inserta los datos de Proyecto)
         $agregar = "INSERT INTO proyecto (ID_Modulo, ID_Persona) VALUES ('$ID_Modulo', '$ID_Persona')";
         $resultado = $mysqli->query($agregar) or die ($mysqli->error);
         $mensaje_de_exito = 'Se agrego con éxito';
     } else {
-        // update
+        // update (Modifica los datos de Proyecto)
         $actualizar = "UPDATE proyecto SET
                                 ID_Modulo = '$ID_Modulo', 
                                 ID_Persona = '$ID_Persona', 
@@ -35,7 +37,7 @@ if (isset($_POST['action'])) {
         $mensaje_de_exito = 'Se modificó con exito';
     }
 } else {
-    // delete
+    // delete (Elimina los datos de Proyecto)
     
     $eliminar= "DELETE FROM proyecto Where ID_Proyecto = $ID_Proyecto";
     $resultado=$mysqli->query($eliminar);
@@ -65,6 +67,7 @@ if (isset($_POST['action'])) {
     </div>
     </div>
 
+<!-- Boton para ir a la paguina de nuevo -->
     <a href="../pantallas/datosProyecto.php"><button class="btn btn-success">Ir a la Lista</button></a>
     
 <!-- Bootstrap JavaScript Libraries -->

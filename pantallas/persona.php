@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
 <body class="fondo">
-<?php 
+<?php
+  //Se autoinicia una sesión 
   session_start();
   //conecta con la bases de datos 
   require ("../base_de_datos/sql_conection.php");
   // incluye las funciones generales
   include "../utils/funciones.php"; 
-  //conecta con la base de datos de persona
+  //Selecciona la base de datos de Persona
   $sql= 'SELECT * FROM persona';
   $result= $mysqli->query($sql) or die ($mysqli->error);
 ?>

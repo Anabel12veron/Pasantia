@@ -15,18 +15,23 @@
 Se ha Agregado un Comentario ✔
 </div>
 </div>
+
 <?php
-session_start();
-require ("../base_de_datos/sql_conection.php");
+//conexion con la base de datos
+    require ("../base_de_datos/sql_conection.php");
+//Se autoinicia una sesión
+    session_start();
+
 
 //print_r($_POST);
     $Nombre_Usuario = $_POST['Nombre_Usuario'];
     $Comentario = $_POST['Comentario'];
-
-$agregar = "INSERT INTO comentario (Nombre_Usuario, Comentario) VALUES ('$Nombre_Usuario', '$Comentario')";
-$resultado = $mysqli->query($agregar) or die ($mysqli->error);
+//Inserta los datos 
+    $agregar = "INSERT INTO comentario (Nombre_Usuario, Comentario) VALUES ('$Nombre_Usuario', '$Comentario')";
+    $resultado = $mysqli->query($agregar) or die ($mysqli->error);
 ?>
 
+<!-- Boton para ir a la paguina de nuevo -->
 <a href="../pantallas/datos_comentario.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 
 <!-- Bootstrap JavaScript Libraries -->

@@ -37,12 +37,12 @@
     </div>
 
     <div>
-        <!-- titulo de inicio de la tabla -->
+<!-- titulo de inicio de la tabla -->
         <h1 class="text-center"> <strong> Proyectos </strong></h1>
     </div>
 
     <div class="container mb-5">
-        <!-- botón que cumple la función de agregar un nuevo proyecto  -->
+<!-- botón que cumple la función de agregar un nuevo proyecto  -->
         <a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button"><strong> Agregar Proyecto </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
@@ -53,12 +53,12 @@
 
         </div>
     </div>
-    <!-- Table JavaScript Libraries -->
+<!-- Table JavaScript Libraries -->
     <script src="../jquery-3.5.1.js"></script>
     <script src="../jquery.dataTables.min.js"></script>
-    <!-- Bootstrap JavaScript Libraries -->
+<!-- Bootstrap JavaScript Libraries -->
     <script src="../popper.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
     <script>

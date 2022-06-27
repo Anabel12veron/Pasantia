@@ -11,15 +11,20 @@
 </head>
 <body class="fondo">
 <h1 class="text-center"><strong> Modifique sus Datos </strong></h1>
+
 	<?php
+//Se autoinicia una sesión
     session_start();
-		require '../base_de_datos/sql_conection.php';
-		$id=$_GET["id"]; 
-      $sql = "SELECT * FROM persona where ID_Persona = $id";
-    	$resultado = $mysqli->query($sql);
-    	$dato = mysqli_fetch_assoc($resultado);
+//conexion con la base de datos
+	require '../base_de_datos/sql_conection.php';
+	$id=$_GET["id"]; 
+//selecciona y pregunta 
+    $sql = "SELECT * FROM persona where ID_Persona = $id";
+    $resultado = $mysqli->query($sql);
+    $dato = mysqli_fetch_assoc($resultado);
 	?>
-  <!--Formulatio y Dirección donde se hace el registro -->
+
+<!--Formulatio y Dirección donde se hace la modificación -->
     <form action="../base_de_datos/crud_mysql.php?id=<?php echo $dato['ID_Persona']?>" method="POST" >
     <input type="text" class="form-control" hidden name="action" id="action" value="update">
       <div class="container" style="background-color: #ffffff; padding: 25px">
@@ -53,22 +58,20 @@
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
         </select>
-
       </div> 
-       </div>
+
       </div>
-      </fieldset>
+       <!-- funcion y boton al guardar o cancelar -->
       <div class="m-3 row">
         <div class="text-center">
           <button name="actualizar" class="btn btn-success" role="button"><strong> Guardar </strong></button>
-          
           <a name="" id="" class="btn btn-danger" href="../pantallas/datos_programador.php" role="button"><strong> Cancelar </strong></a>
         </div>
       </div>
     </form>
-  </div>
+
 <!-- Bootstrap JavaScript Libraries -->
-<script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>

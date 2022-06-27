@@ -22,14 +22,13 @@
     <div class="m-3">
         <div class="table-responsive" style="background-color: white; padding: 15px">
             <?php
+            //Se autoinicia una sesión
             session_start();
             // incluye las funciones generales
             include "../utils/funciones.php";
             // imprime a la tabla con sus datos 
             generarTablaPersona();
             ?>
-
-
            
         </div>
     </div>

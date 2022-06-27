@@ -14,10 +14,11 @@
 </header>
 <body>
 <?php 
-    // la funcion cumple que tiene inicio de sesion
+    //Se inicia una sesión
     session_start();
     //conecta con la bases de datos 
     require("../base_de_datos/sql_conection.php");
+    //print_r($_POST);
     $nombre_Usuario = (isset($_POST["Nombre_Usuario"]))? $_POST["Nombre_Usuario"] : '' ;
     $pass = (isset($_POST["Contrasena"]))? $_POST["Contrasena"] : '' ;
 
@@ -28,7 +29,7 @@
     $queryusuario = mysqli_query($mysqli,"SELECT * FROM registro_usuario WHERE Nombre_Usuario = '$nombre_Usuario'");
     $nr = mysqli_num_rows($queryusuario); 
     $usuarios_registros = mysqli_fetch_array($queryusuario); 
-        //funcion para validar la contraseña o usuario
+    //funcion para validar la contraseña o usuario
     if (($nr == 1) && (password_verify($pass,$usuarios_registros['Contrasena'])) )
         {
             $_SESSION['nombredelusuario']=$nombre_Usuario;
@@ -115,7 +116,7 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
             </div>
-      <!-- funcion y boton al guardar o cancelar -->
+<!-- funcion y boton al guardar o cancelar -->
         <div class="m-3 row">
             <div class="text-center">
                 <button type="submit" class="btn btn-success" name="btnloginx">Ingresar</button>
