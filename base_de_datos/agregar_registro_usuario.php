@@ -51,7 +51,7 @@
         echo '
         <script>
             alert ("Usuario almacenado exitosamente");
-            window.location = "../index.php";
+            window.location = "../pantallas/iniciar_sesion.php";
         </script>
         
         ';

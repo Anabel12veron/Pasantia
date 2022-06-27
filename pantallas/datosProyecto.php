@@ -69,6 +69,7 @@
             var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl)
             })
+
 // la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_PROYECTO").DataTable({
                 language: {
