@@ -63,7 +63,7 @@ include "../utils/funciones.php";
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+        </div>
     </div>
 
 <div style="display: flex; flex-direction: row;" >
@@ -124,10 +124,9 @@ include "../utils/funciones.php";
             <p class="cardt-text">Si decea escribir un comentario en relación con nuestra página web, precione en el botón <strong> "Comentario" </strong> que se encuentra en la pantalla de inicio.</p>
             <p class="cardt-text">Luego de ingresar a la misma, introdusca un "Nombre de Usuario" y debajo su comentario que desea fijar.</p>
         </div>
+        </div>
     </div>
-
 </div>
-   
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

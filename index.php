@@ -28,18 +28,26 @@ include "./utils/funciones.php";
     </div>
     </nav>
 
-<div class="">
+<!-- <div class="">
     <div class="d-grid gap-4 col-3 mx-auto m-3">
       <a class="btn btn-outline-primary" href="./pantallas/informacio.php"><strong> Información </strong></a>
       <a class="btn btn-outline-success" href="./pantallas/persona.php"><strong> Registrar </strong></a>
       <a class="btn btn-outline-danger" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>
       <a class="btn btn-outline-warning" href="./pantallas/datosProyecto.php"><strong> Proyectos </strong></a>
     </div>
+</div> -->
+<div class="btn-group-vertical" role="group" aria-label="Basic example">
+    <div class="d-grid gap-4 col-8 mx-auto m-3">
+      <a class="btn btn-outline-primary" href="./pantallas/informacio.php"><strong> Información </strong></a>
+      <a class="btn btn-outline-success" href="./pantallas/persona.php"><strong> Registrar </strong></a>
+      <a class="btn btn-outline-danger" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>
+      <a class="btn btn-outline-warning" href="./pantallas/datosProyecto.php"><strong> Proyectos </strong></a>
+    </div>
 </div>
-<div class="position-absolute bottom-0 end-0">
+<div class="position-absolute bottom-0 end-0 m-2">
     <a class="btn btn-info" href="./pantallas/comentario.php"><strong> Comentarios </strong></a>
 </div>
-<div class="position-absolute top-0 end-0">
+<div class="position-absolute top-0 end-0 m-2">
     <a class="btn btn-danger" href="./pantallas/cerrar_sesion.php"><strong> Cerrar Sesión </strong></a>
     <input type="hidden" name="cerrar_sesion">
 </div>

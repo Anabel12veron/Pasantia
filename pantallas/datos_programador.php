@@ -8,7 +8,6 @@
     <title>Datos Registrados</title>
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../jquery.dataTables.min.css">
     <link rel="stylesheet" href="../assets/estiloInicio.css">
 </head>
@@ -28,10 +27,10 @@
             include "../utils/funciones.php";
             // imprime a la tabla con sus datos 
             generarTablaPersona();
-            ?>
-           
+            ?>   
         </div>
     </div>
+    
     <!-- Table JavaScript Libraries -->
     <script src="../jquery-3.5.1.js"></script>
     <script src="../jquery.dataTables.min.js"></script>
@@ -52,8 +51,8 @@
                     search: "Buscar&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ Registros",
                     info: "Mostrando _START_ a _END_ del total de _TOTAL_ Registros",
-                    infoEmpty: "Mostrando 0 elementos",
-                    infoFiltered: "(Filtrado de _MAX_ elementos)",
+                    infoEmpty: "No se encuentra datos con estas caracteristicas",
+                    infoFiltered: "(Filtrado _MAX_ elementos)",
                     infoPostFix: "",
                     loadingRecords: "Cargando Registros",
                     zeroRecords: "No se encuentran registros",

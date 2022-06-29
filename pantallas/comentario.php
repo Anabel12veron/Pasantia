@@ -11,7 +11,7 @@
 </head>
 
 <body class="fondo">
-  <!-- botón con la función de regresar a la pantalla de inicio -->
+    <!-- botón con la función de regresar a la pantalla de inicio -->
     <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
     <!-- centra todo el contenido -->
 <div class="container" style="background-color: #ffffff; padding: 10px">
@@ -45,22 +45,21 @@
         <div class="col-sm-11">
           <input type="text" class="form-control" name="Comentario" id="Comentario" placeholder="Ingrese un comentario">
         </div>
+      </div>
         <div class="m-3 row">
         <div class="text-center">
         <a name="" id="" class="btn btn-primary m-3" href="../pantallas/datos_comentario.php" role="button"><strong> Ver Comentarios </strong></a>
           <button class="btn btn-success" role="button"><strong> Fijar Comentario </strong></button>
         </div>
+        </div>
+    </form>
+    </div>
 </div>
-</div>
-
-
-
 
 <!-- Bootstrap JavaScript Libraries -->
   <script src="../jquery/3.3.1/jquery.min.js"></script>
   <script src="../bootstrap.bundle.min.js"></script>
 	<script src="../assets/script.js"></script>
-	</div>
-	</div>
+</div>
 </body>
 </html>

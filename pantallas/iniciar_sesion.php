@@ -122,9 +122,10 @@
                 <button type="submit" class="btn btn-success" name="btnloginx">Ingresar</button>
                     <a name="" id="" class="btn btn-danger" href="" role="button"><strong> Cancelar </strong></a>
             </div>
-      </div>
+        </div>
         </form>
     </div>
+    
 </body>
 </head>
 </html>

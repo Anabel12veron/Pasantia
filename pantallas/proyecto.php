@@ -154,6 +154,7 @@
         <input type="text" name="input_nombre" id="input_nombre" data-bs-toggle="modal" data-bs-target="#modal-programadores" />
       </div>
     </div>
+  </div>
 
 
     <form action="../base_de_datos/agregarProyecto.php" method="POST">
@@ -161,7 +162,8 @@
       <input type="text" class="form-control" hidden name="action" id="action" value="insert">
       <input type="text" class="form-control" name="ID_Modulo" id="ID_Modulo" hidden>
       <input type="text" class="form-control" name="ID_Persona" id="ID_Persona" hidden>
-  </div>
+    </form>
+  
   <!-- funcion y boton al guardar y cancelar-->
   <div class="m-3 row">
     <div class="text-center">

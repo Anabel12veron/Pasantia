@@ -57,10 +57,8 @@
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
         </select>
-      </div> 
       </div>
-      </div>
-      </fieldset>
+    
       <!-- funcion y boton al guardar o cancelar -->
       <div class="m-3 row">
         <div class="text-center">
@@ -68,9 +66,8 @@
           <a name="" id="" class="btn btn-danger" href="../index.php" role="button"><strong> Cancelar </strong></a>
         </div>
       </div>
-    </form>
+    </form> 
   </div>
-
 
 <!-- Bootstrap JavaScript Libraries -->
   <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

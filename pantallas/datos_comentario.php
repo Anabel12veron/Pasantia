@@ -60,6 +60,7 @@
 
         </div>
     </div>
+
     <!-- Table JavaScript Libraries -->
     <script src="../jquery-3.5.1.js"></script>
     <script src="../jquery.dataTables.min.js"></script>
