@@ -30,7 +30,12 @@ if (isset($_POST['action'])) {
         // insert (Insertar los datos de Persona)
         $agregar = "INSERT INTO persona (Nombre, Apellido, F_Nacimiento, DNI, Sexo) VALUES ('$Nombre', '$Apellido', '$F_Nacimiento', $DNI, '$Sexo')";
         $resultado = $mysqli->query($agregar) or die ($mysqli->error);
-        $mensaje_de_exito = 'Se agrego con éxito';
+        echo '
+        <script>
+            alert ("¡Se agrego correctamente el Registro!");
+            window.location = "../pantallas/datos_programador.php";
+        </script>
+        ';
     } else {
         // update (Modifica  los datos de Persona)
         $actualizar = "UPDATE persona SET
@@ -68,8 +73,6 @@ if (isset($_POST['action'])) {
     </div>
     </div>
 
-<!-- Boton para ir a la paguina de nuevo -->
-    <a href="../pantallas/datos_programador.php"><button class="btn btn-success"><strong> Ir a la Lista </strong></button></a>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

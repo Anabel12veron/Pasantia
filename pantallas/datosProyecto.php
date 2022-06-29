@@ -72,16 +72,17 @@
 
 // la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_PROYECTO").DataTable({
+                "lengthMenu": [ 5,10, 25, 50, 75, 100 ],
                 language: {
                     //son las caracteristicas del buscador
-                    processing: "Traitement en cours...",
+                    processing: "Tratamiento en curso...",
                     search: "Buscar&nbsp;:",
-                    lengthMenu: "Mostrar _MENU_ registros",
-                    info: "Mostrando _START_ a _END_ del total de _TOTAL_ registros",
-                    infoEmpty: "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
-                    infoFiltered: "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+                    lengthMenu: "Mostrar _MENU_ Registros",
+                    info: "Mostrando _START_ a _END_ del total de _TOTAL_ Registros",
+                    infoEmpty: "Mostrando 0 elementos ",
+                    infoFiltered: "(Filtrado de _MAX_ elementos)",
                     infoPostFix: "",
-                    loadingRecords: "Cargando registros",
+                    loadingRecords: "Cargando Registros",
                     zeroRecords: "No se encuentran registros",
                     emptyTable: "La tabla está vacia",
                     paginate: {
@@ -103,16 +104,17 @@
         $(document).ready(function() {
 // la funcion que cumple es el de poder buscar los datos mas rapidos 
             $("#TABLA_MODULO").DataTable({
+                "lengthMenu": [ 5,10, 25, 50, 75, 100 ],
                 language: {
                     //son las caracteristicas del buscador
-                    processing: "Traitement en cours...",
+                    processing: "Tratamiento en curso...",
                     search: "Buscar&nbsp;:",
-                    lengthMenu: "Mostrar _MENU_ registros",
-                    info: "Mostrando _START_ a _END_ del total de _TOTAL_ registros",
-                    infoEmpty: "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
-                    infoFiltered: "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+                    lengthMenu: "Mostrar _MENU_ Registros",
+                    info: "Mostrando _START_ a _END_ del total de _TOTAL_ Registros",
+                    infoEmpty: "Mostrando 0 elementos",
+                    infoFiltered: "(Filtrado de _MAX_ elementos)",
                     infoPostFix: "",
-                    loadingRecords: "Cargando registros",
+                    loadingRecords: "Cargando Registros",
                     zeroRecords: "No se encuentran registros",
                     emptyTable: "La tabla está vacia",
                     paginate: {

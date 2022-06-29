@@ -22,36 +22,30 @@
 
 // Si el módulo está relacionado a un proyecto no se le deja eliminar.
     if ($modulo_resultado->{"num_rows"} > 0) {
-    ?>
-        <div class="alert alert-danger d-flex align-items-center " role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"></svg>
-            <div>
-                No se puede eliminar porque tiene relacionado un proyecto. Verifique.
-            </div>
-        </div>
-    <?php
+//Si no se elimina respondemos con un mensaje de error.
+    echo '
+    <script>
+        alert ("No se puede eliminar porque tiene relacionado un proyecto. Verifique.");
+        window.location = "../pantallas/datosProyecto.php";
+    </script>
+    ';
     } else {
 
         $eliminar = "DELETE FROM modulo Where ID_Modulo = $id_modulo";
         $resultado=$mysqli->query($eliminar);
 // Si no está relacionado, se puede eliminar el registro.
-    ?>
-        <div class="alert alert-success d-flex align-items-center" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="success:"></svg>
-            <div>
-                Se ha eliminado una información ✔
-            </div>
-        </div>
-    <?php
+        echo '
+        <script>
+            alert ("¡Se elimino Correctamente!");
+            window.location = "../pantallas/datosProyecto.php";
+        </script>
+        ';
     }
     ?>
 
-<!-- Boton para ir a la paguina de nuevo  -->
-    <a href="../pantallas/datosProyecto.php"><button class="btn btn-success"> <strong> Ir a la Lista </strong></button></a>
 
 <!-- Bootstrap JavaScript Libraries -->
     <script src="../popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="../bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
-
 </html>

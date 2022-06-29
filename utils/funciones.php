@@ -205,7 +205,7 @@ include "../base_de_datos/sql_conection.php";
         }
 //Juntamos todo lo anterior para generar la tabla.
     $strTabla = "
-    <table class='table table-striped' id='$id_tabla'>
+    <table class='table  table-hover order-column' id='$id_tabla'>
     <thead>
         <tr>
             $headers
@@ -312,7 +312,7 @@ function generarTablaProyecto()
     }
         //Juntamos todo lo anterior para generar la tabla.
 $strTabla = "
-<table class='table table-striped' id='$id_tabla'>
+<table class='table  table-hover order-column' id='$id_tabla'>
 <thead>
     <tr>
         $headers
