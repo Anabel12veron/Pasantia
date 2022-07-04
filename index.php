@@ -1,11 +1,9 @@
 <?php
-
 session_start();
-
 include "./utils/funciones.php";
 ?>
-    <!-- Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
 
+    <!-- Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
