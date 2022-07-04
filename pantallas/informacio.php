@@ -21,7 +21,7 @@ include "../utils/funciones.php";
         <!-- titulo de inicio -->
     <h1 class="text-center"><strong> Información </strong></h1>
             <!-- botón con la función de regresar a la pantalla de inicio -->
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
+    <a name="" id="" class="btn btn-dark m-3 rounded-circle" href="../index.php" role="button"><strong> 🡸 </strong></a>
     </div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

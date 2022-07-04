@@ -120,7 +120,7 @@
         <div class="m-3 row">
             <div class="text-center">
                 <button type="submit" class="btn btn-success" name="btnloginx">Ingresar</button>
-                    <a name="" id="" class="btn btn-danger" href="" role="button"><strong> Cancelar </strong></a>
+                    <a name="" id="" class="btn btn-danger" href="../pantallas/registro_usuario.php" role="button"><strong> Cancelar </strong></a>
             </div>
         </div>
         </form>

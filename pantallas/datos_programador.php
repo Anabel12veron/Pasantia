@@ -17,7 +17,7 @@
       <!-- titulo del inicio -->
     <h1 class="text-center"><strong> Datos Registrados </strong></h1>
       <!-- botón con la función de regresar a la pantalla de inicio -->
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
+    <a name="" id="" class="btn btn-dark m-3 rounded-circle" href="../index.php" role="button"><strong> 🡸 </strong></a>
     <div class="m-3">
         <div class="table-responsive" style="background-color: white; padding: 15px">
             <?php

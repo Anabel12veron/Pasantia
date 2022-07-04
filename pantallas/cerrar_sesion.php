@@ -18,5 +18,5 @@ if (ini_get("session.use_cookies")) {
 // Finalmente, destruir la sesión.
 session_destroy();
 //te lleva para volver a iniciar sesion
-header('location: ./iniciar_sesion.php')
+header('location: ./registro_usuario.php')
 ?>

@@ -15,7 +15,7 @@
     <!-- titulo del inicio -->
     <h1 class="text-center"><strong>Comentarios</strong></h1>
     <!-- botón con la función de regresar a la pantalla de inicio -->
-    <a name="" id="" class="btn btn-dark m-3" href="../pantallas/comentario.php" role="button"><strong> 🡸 </strong></a>
+    <a name="" id="" class="btn btn-dark m-3 rounded-circle" href="../pantallas/comentario.php" role="button"><strong> 🡸 </strong></a>
     <!-- centra todo el contenido -->
     <div class="container">
         <div class="table-responsive" style="background-color: white; padding: 10px">
@@ -50,7 +50,7 @@
                     <div id="comment-<?php echo $row["ID_Comentario"]; ?>" class="comment-row">
                         <div class="comment-user, btn btn-secondary"><?php echo $row["Nombre_Usuario"]; ?></div>
                         <div class="comment-msg, text-primary, alert alert-secondary" id="msgdiv-<?php echo $row["ID_Comentario"]; ?>"><?php echo $row["Comentario"]; ?></div>
-                        <div class="delete, d-grid gap-2 d-md-flex justify-content-md-end" name="delete" id="delete-<?php echo $row["ID_Comentario"]; ?>" onclick="deletecomment(<?php echo $row['ID_Comentario']; ?>)"><button class="btn btn-danger"><strong> Eliminar </strong></button></div>
+                        <div class="delete, d-grid gap-2 d-md-flex justify-content-md-end" name="delete" id="delete-<?php echo $row["ID_Comentario"]; ?>" onclick="deletecomment(<?php echo $row['ID_Comentario']; ?>)"><button class="btn btn-danger rounded-pill"><strong> Eliminar </strong></button></div>
                     </div>
                 <?php
                 }

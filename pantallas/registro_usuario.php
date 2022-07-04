@@ -57,13 +57,13 @@
                 <div class="form-group">
                     <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required"></div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="form-check-label">
                         <input type="checkbox" required="required"> Acepta los
                         <a href="#">Termino de Uso</a> &amp;
                         <a href="#">Politica de Privacidad</a>
                     </label>
-                </div>
+                </div> -->
                 <!-- funcion y boton al guardar -->
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>

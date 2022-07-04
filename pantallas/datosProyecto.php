@@ -20,7 +20,7 @@
         <!-- titulo de inicio de la tabla -->
         <h1 class="text-center"><strong> Módulos </strong></h1>
         <!-- botón con la función de regresar a la pantalla de inicio -->
-        <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
+        <a name="" id="" class="btn btn-dark m-3 rounded-circle" href="../index.php" role="button"><strong> 🡸 </strong></a>
         <!-- botón que cumple la función de agregar un nuevo Módulo -->
         <a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Módulo </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
@@ -43,7 +43,7 @@
 
     <div class="container mb-5">
 <!-- botón que cumple la función de agregar un nuevo proyecto  -->
-        <a name="" id="" class="btn btn-primary m-3" href="../pantallas/proyecto.php" role="button"><strong> Agregar Proyecto </strong></a>
+        <a name="" id="" class="btn btn-primary m-3 " href="../pantallas/proyecto.php" role="button"><strong> Agregar Proyecto </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
 // imprime la tabla proyecto con sus datos

@@ -1,10 +1,10 @@
 <?php
+
 session_start();
 
 include "./utils/funciones.php";
-
 ?>
-    <!-- // Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
+    <!-- Siempre que quieran entarar a la pantalla principal sin iniciar sesion le mandara una alerta  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,23 +27,19 @@ include "./utils/funciones.php";
 
     </div>
     </nav>
+    <div class="text-center mx-auto m-2 ">
+        <img src="./img/logo_upsti.png" class="rounded border border-2" alt="...">
 
-<!-- <div class="">
-    <div class="d-grid gap-4 col-3 mx-auto m-3">
-      <a class="btn btn-outline-primary" href="./pantallas/informacio.php"><strong> Información </strong></a>
-      <a class="btn btn-outline-success" href="./pantallas/persona.php"><strong> Registrar </strong></a>
-      <a class="btn btn-outline-danger" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>
-      <a class="btn btn-outline-warning" href="./pantallas/datosProyecto.php"><strong> Proyectos </strong></a>
-    </div>
-</div> -->
-<div class="btn-group-vertical" role="group" aria-label="Basic example">
+    <div class="btn-group-vertical border border-3" role="group" aria-label="Basic example">
     <div class="d-grid gap-4 col-8 mx-auto m-3">
-      <a class="btn btn-outline-primary" href="./pantallas/informacio.php"><strong> Información </strong></a>
-      <a class="btn btn-outline-success" href="./pantallas/persona.php"><strong> Registrar </strong></a>
-      <a class="btn btn-outline-danger" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>
-      <a class="btn btn-outline-warning" href="./pantallas/datosProyecto.php"><strong> Proyectos </strong></a>
+        <a class="btn btn-outline-secondary text-info rounded-pill" href="./pantallas/informacio.php"><strong> Información </strong></a>
+        <a class="btn btn-outline-secondary text-info rounded-pill" href="./pantallas/persona.php"><strong> Registrar </strong></a>
+        <a class="btn btn-outline-secondary text-info rounded-pill" href="./pantallas/datos_programador.php"><strong> Registros del Programador </strong></a>
+        <a class="btn btn-outline-secondary text-info rounded-pill" href="./pantallas/datosProyecto.php"><strong> Proyectos </strong></a>
     </div>
-</div>
+    </div>
+    
+
 <div class="position-absolute bottom-0 end-0 m-2">
     <a class="btn btn-info" href="./pantallas/comentario.php"><strong> Comentarios </strong></a>
 </div>

@@ -82,12 +82,12 @@ function generarTablaPersona()
 
                 <td>
                     <a href='../base_de_datos/eliminarDatos.php?id=" . $programador['ID_Persona'] . "'>
-                        <button class='btn btn-danger'><strong> Eliminar </strong></button>
+                        <button class='btn btn-danger rounded-pill'><strong> Eliminar </strong></button>
                     </a>
                 </td>
                 <td>
                     <a href='../base_de_datos/modificarDatos.php?id=" . $programador['ID_Persona'] . "'>
-                        <button class='btn btn-primary'><strong> Modificar </strong></button>
+                        <button class='btn btn-primary rounded-pill'><strong> Modificar </strong></button>
                     </a>
                 </td>
 
@@ -177,12 +177,12 @@ include "../base_de_datos/sql_conection.php";
                 $botonesAdmin = "
                     <td>
                     <a href='../base_de_datos/eliminarModulo.php?id=". $MODULO['ID_Modulo']. "'>
-                        <button class='btn btn-danger'><strong> Eliminar </strong></button>
+                        <button class='btn btn-danger rounded-pill'><strong> Eliminar </strong></button>
                     </a>
                     </td>
                     <td>
                         <a href= '../base_de_datos/modificarModulo.php?id=". $MODULO['ID_Modulo']."'>
-                            <button class='btn btn-primary'><strong> Modificar </strong></button>
+                            <button class='btn btn-primary rounded-pill'><strong> Modificar </strong></button>
                         </a>
                     </td>
 
@@ -277,7 +277,7 @@ function generarTablaProyecto()
             $botonesAdmin = "
             <td>
                 <a href='../base_de_datos/eliminarProyecto.php?id=". $PROYECTO[ 'ID_Proyecto']. "'>
-                    <button class='btn btn-danger'><strong> Eliminar </strong></button>
+                    <button class='btn btn-danger rounded-pill'><strong> Eliminar </strong></button>
                 </a>
             </td>
 

@@ -1,8 +1,8 @@
 <?php
+//Se autoinicia una sesión
+session_start();
 //conexion con la base de datos
     require ("../base_de_datos/sql_conection.php");
-//Se autoinicia una sesión
-    session_start();
 //print_r($_POST);
     $Nombre_Usuario = $_POST['Nombre_Usuario'];
     $Comentario = $_POST['Comentario'];

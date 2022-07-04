@@ -12,7 +12,7 @@
 
 <body class="fondo">
     <!-- botón con la función de regresar a la pantalla de inicio -->
-    <a name="" id="" class="btn btn-dark m-3" href="../index.php" role="button"><strong> 🡸 </strong></a>
+    <a name="" id="" class="btn btn-dark m-3 rounded-circle" href="../index.php" role="button"><strong> 🡸 </strong></a>
     <!-- centra todo el contenido -->
 <div class="container" style="background-color: #ffffff; padding: 10px">
 <?php
