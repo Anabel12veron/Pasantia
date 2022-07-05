@@ -19,7 +19,7 @@
     $resultado=$mysqli->query($eliminar);
     echo '
     <script>
-        alert ("¡Se elimino Correctamente!");
+        alert ("¡Se Elimino con exito el Proyecto!");
         window.location = "../pantallas/datosProyecto.php";
     </script>
     ';

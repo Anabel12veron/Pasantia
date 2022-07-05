@@ -36,7 +36,7 @@
 // Si no está relacionado, se puede eliminar el registro.
         echo '
         <script>
-            alert ("¡Se elimino Correctamente!");
+            alert ("¡Se Elimino con exito el Modulo!");
             window.location = "../pantallas/datosProyecto.php";
         </script>
         ';
