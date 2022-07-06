@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <select class="form-select" aria-label="Default select example"  name="ID_Rol" id="ID_Rol" >
                         <option value="2">Invitado 🙎‍♂️</option>
-                        <option value="1" >Administrador 🔑</option>
+                        <option value="1" hidden>Administrador 🔑</option>
                     </select>
                 </div>
                 <div class="form-group">

@@ -111,9 +111,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="Correo" placeholder="Correo Electronico" required="required">
-            </div>
-            <div class="form-group">
                 <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
             </div>
 <!-- funcion y boton al guardar o cancelar -->

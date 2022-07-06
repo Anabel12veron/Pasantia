@@ -48,8 +48,8 @@
       </div>
         <div class="m-3 row">
         <div class="text-center">
-        <a name="" id="" class="btn btn-primary m-3" href="../pantallas/datos_comentario.php" role="button"><strong> Ver Comentarios </strong></a>
-          <button class="btn btn-success" role="button"><strong> Fijar Comentario </strong></button>
+        <a name="" id="" class="btn btn-primary m-3" href="../pantallas/datos_comentario.php" role="button"><strong> Ver Comentarios 🗃 </strong></a>
+          <button class="btn btn-success" role="button"><strong> Fijar Comentario 📤 </strong></button>
         </div>
         </div>
     </form>

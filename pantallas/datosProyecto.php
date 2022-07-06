@@ -76,7 +76,7 @@
                 language: {
                     //son las caracteristicas del buscador
                     processing: "Tratamiento en curso...",
-                    search: "Buscar&nbsp;:",
+                    search: "🔎&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ Registros",
                     info: "Mostrando _START_ a _END_ del total de _TOTAL_ Registros",
                     infoEmpty: "No se encuentra datos con estas caracteristicas",
@@ -87,8 +87,8 @@
                     emptyTable: "La tabla está vacia",
                     paginate: {
                         first: "Primero",
-                        previous: "Previo",
-                        next: "Siguiente",
+                        previous: "◀",
+                        next: "▶",
                         last: "Último"
                     },
                     aria: {
@@ -108,7 +108,7 @@
                 language: {
                     //son las caracteristicas del buscador
                     processing: "Tratamiento en curso...",
-                    search: "Buscar&nbsp;:",
+                    search: "🔎&nbsp;:",
                     lengthMenu: "Mostrar _MENU_ Registros",
                     info: "Mostrando _START_ a _END_ del total de _TOTAL_ Registros",
                     infoEmpty: "No se encuentra datos con estas caracteristicas",
@@ -119,8 +119,8 @@
                     emptyTable: "La tabla está vacia",
                     paginate: {
                         first: "Primero",
-                        previous: "Previo",
-                        next: "Siguiente",
+                        previous: "◀",
+                        next: "▶",
                         last: "Último"
                     },
                     aria: {

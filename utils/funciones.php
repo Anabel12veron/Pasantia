@@ -54,8 +54,8 @@ function generarTablaPersona()
     if ($_SESSION['rol'] == 1) {
 
         $headersAdmin = "
-        <th>Eliminar</th>
-        <th>Modificar</th>
+        <th></th>
+        <th></th>
         ";
     }
 
@@ -151,8 +151,8 @@ include "../base_de_datos/sql_conection.php";
     if ($_SESSION['rol'] == 1) {
 
         $headersAdmin = "
-        <th>Eliminar</th>
-        <th>Modificar</th>
+        <th></th>
+        <th></th>
         ";
     }
     
@@ -248,7 +248,7 @@ function generarTablaProyecto()
     if ($_SESSION['rol'] == 1) {
 
         $headersAdmin = "
-        <th>Eliminar</th>
+        <th></th>
         ";
     }
         //Creamos una variable que contenga los encabezados de la tabla 
