@@ -14,14 +14,13 @@ include "./utils/funciones.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/estiloInicio.css">
     <!-- Bootstrap CSS v5.0.2 -->
-    <link rel="stylesheet" href="./bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Clase de los iconos -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- Table JavaScript Libraries -->
-    <script src="./jquery-3.5.1.js"></script>
-    <script src="./jquery.dataTables.min.js"></script>
+
 </head>
 
 <body class="fondo">
@@ -72,6 +71,9 @@ include "./utils/funciones.php";
         <a class="btn btn-danger border border-3" href="./pantallas/cerrar_sesion.php"><strong> ❎ Cerrar Sesión </strong></a>
         <input type="hidden" name="cerrar_sesion">
     </div>
+        <!-- Table JavaScript Libraries -->
+        <script src="./jquery-3.5.1.js"></script>
+    <script src="./jquery.dataTables.min.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="./popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="./bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
