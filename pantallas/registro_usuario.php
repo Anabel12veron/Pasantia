@@ -27,7 +27,7 @@
         <form action="../base_de_datos/agregar_registro_usuario.php" method="POST" class="needs-validation" novalidate>
             <!-- Titulo de la pantalla -->
             <h2>Registrar</h2>
-            <p class="hint-text">Crea tu cuenta.</p>
+            <p class="hint-text">Crea tu cuenta</p>
             <div class="form-group">
                 <input type="text" class="form-control" hidden name="action" id="action" value="insert">
                 <div class="form-group">
@@ -37,34 +37,27 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Nombre de Usuario" required="required">
+                    <input type="text" class="form-control" name="Nombre_Usuario" id="Nombre_Usuario" placeholder="Usuario" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
+                    <input type="text" class="form-control" name="Nombre" id= "Nombre" placeholder="Nombre" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="Apellido" placeholder="Apellido" required="required">
+                    <input type="text" class="form-control" name="Apellido" id= "Apellido" placeholder="Apellido" required>
                 </div>
                 <div class="form-group">
-                    <input type="date" class="form-control" name="Fecha_Nac" id="Fecha de Nacimiento" placeholder="">
+                    <input type="date" class="form-control" name="Fecha_Nac" id="Fecha_Nac">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="Celular" placeholder="Celular" required="required">
+                    <input type="text" class="form-control" name="Celular" id= "Celular" placeholder="Celular" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" name="Correo" placeholder="Correo Electronico" required="required">
+                    <input type="email" class="form-control" name="Correo" id= "Correo" placeholder="@Correo electronico" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required"></div>
+                    <input type="password" class="form-control" name="Contrasena" id= "Contrasena" placeholder="Contraseña" required>
                 </div>
-                <!-- <div class="form-group">
-                    <label class="form-check-label">
-                        <input type="checkbox" required="required"> Acepta los
-                        <a href="#">Termino de Uso</a> &amp;
-                        <a href="#">Politica de Privacidad</a>
-                    </label>
-                </div> -->
-                <!-- funcion y boton al guardar -->
+                <!-- boton guardar -->
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
                 </div>

@@ -35,6 +35,7 @@
             $_SESSION['nombredelusuario']=$nombre_Usuario;
             $_SESSION['registro_usuario'] = $usuarios_registros['Nombre_Usuario'];
             $_SESSION['rol'] = $usuarios_registros['ID_Rol'];
+            $_SESSION['email'] = $usuarios_registros['Correo'];
             header("Location: ../index.php");
         }
     else
@@ -104,14 +105,12 @@
             <!-- Contenido de la pantalla Inicio Sesion -->
             <div class="form-group">
                 <input type="text" class="form-control" hidden name="action" id="action" value="insert">
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Nombre de Usuario" required="required">
-                    </div>
-                </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Usuario" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required="required">
+                <input type="password" class="form-control" name="Contrasena" placeholder="Contraseña" required>
+            </div>
             </div>
 <!-- funcion y boton al guardar o cancelar -->
         <div class="m-3 row">

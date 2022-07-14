@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    // incluye las funciones generales
+    include "../utils/funciones.php";
+    // imprime la tabla modilo con sus datos
+    $rol_name = ($_SESSION['rol'] == 1 )? "Administrador" : "Invitado" ;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +22,26 @@
 </head>
 
 <body class="fondo">
+<section >
+      <div class="col col-md-1 col-lg-8 col-xl-5" style="width: 100%;">
+        <div class="card" style="border-radius: 2px; background-color: #054000;">
+          <div class="card-body p-1">
+            <div class="d-flex text-white">
+              <div class="flex-shrink-0">
+                <img src="../img/profile.jpg"  class="img-fluid rounded-circle"
+                  alt="Generic placeholder image"
+                  style="width: 50px; border-radius: 10px;">
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h5 class="mb-1"> <?php echo $_SESSION["nombredelusuario"] ?> </h5>
+                <p class="mb-2 pb-1" style="color: white;"><?php echo $rol_name ?> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+</section>
     <div class="container mb-5">
         <!-- titulo de inicio de la tabla -->
         <h1 class="text-center"><strong> Módulos </strong></h1>
@@ -25,10 +51,7 @@
         <a name="" id="" class="btn btn-primary m-3" href="../pantallas/modulo.php" role="button"><strong> Agregar Módulo </strong></a>
         <div class="table-responsive" style="background-color: white; padding: 10px">
             <?php
-            session_start();
-            // incluye las funciones generales
-            include "../utils/funciones.php";
-            // imprime la tabla modilo con sus datos
+
             generarTablaModulo()
             ?>
 

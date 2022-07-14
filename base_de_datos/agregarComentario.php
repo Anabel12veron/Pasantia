@@ -6,9 +6,9 @@ session_start();
 //print_r($_POST);
     $Nombre_Usuario = $_POST['Nombre_Usuario'];
     $Comentario = $_POST['Comentario'];
-//Inserta los datos 
-    $agregar = "INSERT INTO comentario (Nombre_Usuario, Comentario) VALUES ('$Nombre_Usuario', '$Comentario')";
-    $resultado = $mysqli->query($agregar) or die ($mysqli->error);
+    //Inserta los datos 
+    $insertar = "INSERT INTO comentario (Nombre_Usuario, Comentario) VALUES ('$Nombre_Usuario', '$Comentario')";
+    $ejecutar = $mysqli->query($insertar) or die ($mysqli->error);
     echo '
         <script>
             alert ("¡Se agrego correctamente el Comentario!");

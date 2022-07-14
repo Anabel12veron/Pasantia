@@ -167,7 +167,7 @@
   <!-- funcion y boton al guardar y cancelar-->
   <div class="m-3 row">
     <div class="text-center">
-      <button class="btn btn-success" role="button"><strong> Guardar </strong></button>
+    <button class="btn btn-success" role="button"  type="submit"><strong> Guardar </strong></button>
       <a name="" id="" class="btn btn-danger" href="../pantallas/datosProyecto.php" role="button"><strong> Cancelar </strong></a>
     </div>
   </div>

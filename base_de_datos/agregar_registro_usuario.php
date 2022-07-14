@@ -13,7 +13,6 @@
     $Fecha_Nac = $_POST['Fecha_Nac'];
     $Contrasena = password_hash($_POST['Contrasena'], PASSWORD_BCRYPT);
 
-
 // Inserta datos 
     $insertar = "INSERT INTO registro_usuario (ID_Rol, Nombre_Usuario, Nombre, Apellido, Celular, Correo, Fecha_Nac, Contrasena) VALUES ( '$rol', '$usuario', '$Nombre', '$Apellido', '$Celular', '$Correo', '$Fecha_Nac', '$Contrasena')";
 
@@ -31,7 +30,7 @@
     }
 
 //  verificar que el usuario no se repita 
-    $verificar_usuario = mysqli_query($mysqli, "SELECT * FROM registro_usuario WHERE Nombre_Usuario='$usuario ' ");
+    $verificar_usuario = mysqli_query($mysqli, "SELECT * FROM registro_usuario WHERE Nombre_Usuario='$usuario' ");
 
     if (mysqli_num_rows($verificar_usuario) > 0){
         echo '
@@ -53,7 +52,6 @@
             alert ("Usuario almacenado exitosamente");
             window.location = "../pantallas/iniciar_sesion.php";
         </script>
-        
         ';
 //Si no se ejecuta bien sale un alerta y no inicia 
     }else {

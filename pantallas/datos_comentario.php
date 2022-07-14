@@ -54,12 +54,12 @@
                     ?>
                         <!-- estructura de los datos almacenados en pantalla -->
                             <div id="comment-<?php echo $row["ID_Comentario"]; ?>" class="comment-row">
-                            <div class="comment-user, btn btn-secondary"><?php echo $row["Nombre_Usuario"]; ?></div>
+                            <div class="comment-user, btn btn-secondary" ><?php echo $row["Nombre_Usuario"]; ?></div>
 
                             <?php
                             if ($user_coment == $_SESSION["nombredelusuario"]) {
                             ?>
-                            <div class="comment-msg, text-primary, alert alert-secondary" id="msgdiv-<?php echo $row["ID_Comentario"]; ?>"><?php echo $row["Comentario"]; ?><button class="btn btn-danger rounded-pill"><strong> Eliminar </strong></button></div>  
+                            <div style="display: flex;justify-content: space-between;" class="comment-msg, text-primary, alert alert-secondary" id="msgdiv-<?php echo $row["ID_Comentario"]; ?>"><?php echo $row["Comentario"]; ?><button class="btn btn-danger rounded-pill" onclick="deletecomment(<?php echo $row['ID_Comentario']; ?>)"><strong> Eliminar </strong></button></div>  
                             <div class="delete, d-md-flex justify-content-md-end" name="delete" id="delete <?php echo $row["ID_Comentario"]; ?>" onclick="deletecomment(<?php echo $row['ID_Comentario']; ?>)"></div>
                         
                             <?php

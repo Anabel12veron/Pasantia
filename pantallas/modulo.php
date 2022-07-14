@@ -30,7 +30,7 @@
       <div class="mb-3 row">
         <label for="Nombre_Modulo" class="col-sm-1-12 col-form-label"><strong> Nombre del Modulo </strong></label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="Nombre_Modulo" id="Nombre_Modulo" placeholder="Ingrese el nombre del Modulo en que que trabaja">
+          <input type="text" class="form-control" name="Nombre_Modulo" id="Nombre_Modulo" placeholder="Ingrese el nombre del Modulo en el que trabaja">
         </div>
       </div>
       <div class="mb-3 row">

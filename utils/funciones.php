@@ -5,6 +5,16 @@ verificar_sesion();
  * Esta functión genera la verificacion de inicio sesion. 
  * Retorna un HTML de la tabla
  */
+
+// function para consultar a la base de datos
+function consultar($sql){
+    include "./base_de_datos/sql_conection.php";
+    $resultado = mysqli_query($mysqli, $sql);
+    
+    return mysqli_fetch_assoc($resultado);;
+}
+
+
 function verificar_sesion()
 {
     if (!isset($_SESSION['registro_usuario'])) {
